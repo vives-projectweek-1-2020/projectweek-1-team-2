@@ -11,3 +11,16 @@ E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\VisitorLogin
 E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\VisitorMain.g.cs
 E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI_MarkupCompile.cache
 E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI_MarkupCompile.lref
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\ContactHistory.g.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\MainWindow.g.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\MakeAppointment.g.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\PatientLogin.g.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\PatientMain.g.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\PatientRegister.g.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\ReportCase.g.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\VisistorRegister.g.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\VisitorLogin.g.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\VisitorMain.g.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI_MarkupCompile.cache
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI_MarkupCompile.lref

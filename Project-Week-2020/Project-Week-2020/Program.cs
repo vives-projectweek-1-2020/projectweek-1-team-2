@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Data.SqlClient;
 
 namespace Project_Week_2020
 {
@@ -13,6 +14,7 @@ namespace Project_Week_2020
         static int NumberDegreeResident = 0;
         static public bool AccessVisitor = false;
         static public bool AccessResident = false;
+        static public bool LoginVisitor = false;
 
         public static void RandomNumberVisitor() //generates a random number.
         {
@@ -103,6 +105,7 @@ namespace Project_Week_2020
             }
         }
 
+        
 
 
 
@@ -120,3 +123,6 @@ namespace Project_Week_2020
         }
     }
 }
+
+
+

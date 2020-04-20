@@ -6,4 +6,13 @@
     <RootNamespace>Project_Week_2020</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Update="FirstName.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="LastName.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

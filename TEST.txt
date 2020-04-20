@@ -1,2 +1,7 @@
 Hallo dit is een test van seppe de witte
 hallo dit is joachim die het bestand ontvangen heeft
+<<<<<<< HEAD
+ontvangen door Pixie
+=======
+Munroe is here
+>>>>>>> 5da6911ffa6315979fa6f6a6b877972b9232413d

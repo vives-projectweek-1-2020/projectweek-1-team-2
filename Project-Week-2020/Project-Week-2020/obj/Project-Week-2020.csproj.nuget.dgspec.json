@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Herman Munroe\\Desktop\\Vives\\Semester 2\\Project week\\projectweek-1-team-2\\Project-Week-2020\\Project-Week-2020\\Project-Week-2020.csproj": {}
+    "D:\\VivesGitHub\\projectweek-1-team-2\\Project-Week-2020\\Project-Week-2020\\Project-Week-2020.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Herman Munroe\\Desktop\\Vives\\Semester 2\\Project week\\projectweek-1-team-2\\Project-Week-2020\\Project-Week-2020\\Project-Week-2020.csproj": {
+    "D:\\VivesGitHub\\projectweek-1-team-2\\Project-Week-2020\\Project-Week-2020\\Project-Week-2020.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Herman Munroe\\Desktop\\Vives\\Semester 2\\Project week\\projectweek-1-team-2\\Project-Week-2020\\Project-Week-2020\\Project-Week-2020.csproj",
+        "projectUniqueName": "D:\\VivesGitHub\\projectweek-1-team-2\\Project-Week-2020\\Project-Week-2020\\Project-Week-2020.csproj",
         "projectName": "Project-Week-2020",
-        "projectPath": "C:\\Users\\Herman Munroe\\Desktop\\Vives\\Semester 2\\Project week\\projectweek-1-team-2\\Project-Week-2020\\Project-Week-2020\\Project-Week-2020.csproj",
-        "packagesPath": "C:\\Users\\Herman Munroe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Herman Munroe\\Desktop\\Vives\\Semester 2\\Project week\\projectweek-1-team-2\\Project-Week-2020\\Project-Week-2020\\obj\\",
+        "projectPath": "D:\\VivesGitHub\\projectweek-1-team-2\\Project-Week-2020\\Project-Week-2020\\Project-Week-2020.csproj",
+        "packagesPath": "C:\\Users\\Seppe\\.nuget\\packages\\",
+        "outputPath": "D:\\VivesGitHub\\projectweek-1-team-2\\Project-Week-2020\\Project-Week-2020\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Herman Munroe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Seppe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

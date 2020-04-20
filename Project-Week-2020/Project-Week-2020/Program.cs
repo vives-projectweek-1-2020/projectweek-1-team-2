@@ -38,7 +38,7 @@ namespace Project_Week_2020
         public static void SHOW() //shows the first name + last name + the temperature of the person.
         {
             Console.WriteLine($"Welcome {FirstNameGive} {LastNameGive}");
-            Console.WriteLine("Give us one second were are going to measure your body temperature.");
+            Console.WriteLine("Give us one second. We're going to measure your body temperature.");
             Console.WriteLine($"At this moment your body temperature is {NumberDegree}° \n");
             if(NumberDegree > 38)
             {

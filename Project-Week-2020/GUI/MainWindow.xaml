@@ -5,8 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" Height="300" Width="800">
+    <StackPanel>
+        <Grid Height="268" RenderTransformOrigin="0.501,0.302">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="5*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="110" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <Button x:Name="patient" Content="Patient" Grid.Column="1" Grid.Row="1" Background="LightGray"
+                    Margin="10" BorderBrush="Black" FontSize="24" Click="Patient_Click" />
+            <Button x:Name="visitor" Content="Visitor" Grid.Column="2" Grid.Row="1" Background="LightGray"
+                    Margin="10" BorderBrush="Black" FontSize="24" Click="Visitor_Click" />
+        </Grid>
+    </StackPanel>
 </Window>

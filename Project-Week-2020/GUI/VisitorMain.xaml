@@ -5,8 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="VisitorMain" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="VisitorMain" Height="300" Width="800">
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="3*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="110" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <TextBlock Text="Visitor" Grid.Column="1" TextAlignment="Center" FontSize="30"
+                       VerticalAlignment="Center" />
+            <Button x:Name="login" Content="Login" Grid.Column="1" Grid.Row="1" 
+                    Margin="10" HorizontalAlignment="Left" Width="200" Height="60"
+                    Background="LightGray" BorderBrush="Black" FontSize="24"
+                    Click="login_Click" />
+            <Button x:Name="register" Content="Register" Grid.Column="1" Grid.Row="1"
+                    Margin="10" HorizontalAlignment="Right" Width="200" Height="60"
+                    Background="LightGray" BorderBrush="Black" FontSize="24"
+                    Click="register_Click" />
+        </Grid>
+    </StackPanel>
 </Window>

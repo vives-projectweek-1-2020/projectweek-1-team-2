@@ -24,5 +24,19 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void Patient_Click(object sender, RoutedEventArgs e)
+        {
+            PatientMain patientmain = new PatientMain();
+            patientmain.Show();
+            this.Close();
+        }
+
+        private void Visitor_Click(object sender, RoutedEventArgs e)
+        {
+            VisitorMain visitormain = new VisitorMain();
+            visitormain.Show();
+            this.Close();
+        }
     }
 }

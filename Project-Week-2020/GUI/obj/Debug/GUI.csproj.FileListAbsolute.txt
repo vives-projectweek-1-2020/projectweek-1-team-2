@@ -1,0 +1,13 @@
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.csprojAssemblyReference.cache
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\ContactHistory.g.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\MainWindow.g.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\MakeAppointment.g.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\PatientLogin.g.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\PatientMain.g.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\PatientRegister.g.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\ReportCase.g.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\VisistorRegister.g.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\VisitorLogin.g.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\VisitorMain.g.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI_MarkupCompile.cache
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI_MarkupCompile.lref

@@ -49,6 +49,7 @@ namespace Project_Week_2020
             else if (NumberDegree <= 38)
             {
                 Console.WriteLine("Welcome to the Nursing Home... but please respect the social distinsing and avoid any unnecessary contact with other people.");
+                Access = true;
             }
         }
 

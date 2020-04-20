@@ -1,0 +1,12 @@
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.exe
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.deps.json
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.runtimeconfig.json
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.runtimeconfig.dev.json
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.dll
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.pdb
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.csproj.CoreCompileInputs.cache
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.AssemblyInfoInputs.cache
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.AssemblyInfo.cs
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.dll
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.pdb
+E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.genruntimeconfig.cache

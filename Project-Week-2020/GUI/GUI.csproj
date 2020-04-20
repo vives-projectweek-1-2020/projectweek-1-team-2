@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1B8C2A60-78E9-441F-BAB8-D6785067DEB0}</ProjectGuid>
+    <ProjectGuid>{8F244368-9BD9-4696-810B-70287DE762A4}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>GUI</RootNamespace>
     <AssemblyName>GUI</AssemblyName>
@@ -51,29 +51,21 @@
     <Reference Include="PresentationFramework" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ContactHistory.xaml.cs">
-      <DependentUpon>ContactHistory.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="MakeAppointment.xaml.cs">
-      <DependentUpon>MakeAppointment.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PatientLogin.xaml.cs">
-      <DependentUpon>PatientLogin.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PatientRegister.xaml.cs">
-      <DependentUpon>PatientRegister.xaml</DependentUpon>
-    </Compile>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
     <Compile Include="ReportCase.xaml.cs">
       <DependentUpon>ReportCase.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="VisistorRegister.xaml.cs">
-      <DependentUpon>VisistorRegister.xaml</DependentUpon>
     </Compile>
     <Compile Include="VisitorLogin.xaml.cs">
       <DependentUpon>VisitorLogin.xaml</DependentUpon>
     </Compile>
     <Compile Include="VisitorMain.xaml.cs">
       <DependentUpon>VisitorMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="VisitorRegister.xaml.cs">
+      <DependentUpon>VisitorRegister.xaml</DependentUpon>
     </Compile>
     <Page Include="ContactHistory.xaml">
       <SubType>Designer</SubType>
@@ -83,6 +75,13 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="ContactHistory.xaml.cs">
+      <DependentUpon>ContactHistory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -107,10 +106,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="VisistorRegister.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="VisitorLogin.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -119,10 +114,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="VisitorRegister.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MakeAppointment.xaml.cs">
+      <DependentUpon>MakeAppointment.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatientLogin.xaml.cs">
+      <DependentUpon>PatientLogin.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PatientMain.xaml.cs">
       <DependentUpon>PatientMain.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PatientRegister.xaml.cs">
+      <DependentUpon>PatientRegister.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>

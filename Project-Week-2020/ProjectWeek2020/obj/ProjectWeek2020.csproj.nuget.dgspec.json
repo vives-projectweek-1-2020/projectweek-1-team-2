@@ -1,20 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Programming\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj": {}
+    "D:\\VivesGitHub\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj": {}
   },
   "projects": {
-    "E:\\Programming\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj": {
+    "D:\\VivesGitHub\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Programming\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj",
+        "projectUniqueName": "D:\\VivesGitHub\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj",
         "projectName": "ProjectWeek2020",
-        "projectPath": "E:\\Programming\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj",
-        "packagesPath": "C:\\Users\\Pixie\\.nuget\\packages\\",
-        "outputPath": "E:\\Programming\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\obj\\",
+        "projectPath": "D:\\VivesGitHub\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj",
+        "packagesPath": "C:\\Users\\Seppe\\.nuget\\packages\\",
+        "outputPath": "D:\\VivesGitHub\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Pixie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Seppe\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -52,7 +55,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

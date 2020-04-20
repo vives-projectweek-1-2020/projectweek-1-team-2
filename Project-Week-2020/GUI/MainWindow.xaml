@@ -5,8 +5,33 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="MainWindow" Height="450" Width="1000">
+    <StackPanel>
+        <Grid>
+            <TextBlock Text="Welcome To The Nursing Home" HorizontalAlignment="Center" Foreground="#FFEE6618" FontSize="45" Margin="0 0 0 25" FontFamily="Dead Kansas"/>
+        </Grid>
+        <Grid>
+            <TextBlock  Text="In the nursing home we follow all the rules of the goverment strictly so everyone leave 1,5 meters and wash your hands!"  HorizontalAlignment="Center" FontFamily="Dead Kansas" FontSize="14"/>
+        </Grid>
+        <Grid>
+            <TextBlock Text="First of all we need to know how you are? Are you A visitor or an Resident." Margin="0 10 0 10" HorizontalAlignment="Center" FontFamily="Dead Kansas" FontSize="14"/>
+        </Grid>
+        <Grid>
+            <TextBlock Text="Total Visitors = ..." x:Name="TotalVisitors" HorizontalAlignment="Center" FontFamily="Dead Kansas" Margin="0 10 0 50" FontSize="32"/>
+        </Grid>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button x:Name="Patient" Content="Patient" Grid.Row="1" Grid.Column="0" Margin="50 0 50 0" FontSize ="24" Click="Patient_Click"/>
+            <Button x:Name="Visitor" Content="Visitor" Grid.Row="1" Grid.Column="1" Margin="50 0 50 0" FontSize="24" Click="Visitor_Click"/>
+        </Grid>
         
-    </Grid>
+    </StackPanel>
+   
 </Window>

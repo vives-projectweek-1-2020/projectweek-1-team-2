@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="VisitorMain" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="VisitorMain" Height="450" Width="1000">
+    <StackPanel>
+        <Grid>
+            <TextBlock Text="Welcome Visitor to the Nursing home" HorizontalAlignment="Center" FontFamily="Dead Kansas" FontSize="35"/>
+        </Grid>
+        <Grid>
+            <TextBlock Text="The next thing we want to know is. Are you new to this nursing home or did you already made an account on or platform" HorizontalAlignment="Center" Margin="0 15" FontFamily="Dead Kansas" FontSize="13" />
+        </Grid>
+    </StackPanel>
+    
 </Window>

@@ -23,6 +23,24 @@ namespace GUI
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+
+       
+
+        private void Visitor_Click(object sender, RoutedEventArgs e)
+        {
+            VisitorMain gamescreen = new VisitorMain();
+            gamescreen.Show();
+            this.Close();
+        }
+
+
+        private void Patient_Click(object sender, RoutedEventArgs e)
+        {
+            PatientMain gamescreen = new PatientMain();
+            gamescreen.Show();
+            this.Close();
         }
     }
 }

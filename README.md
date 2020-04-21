@@ -16,7 +16,7 @@ The general working of this app aims to do the following:
 
 ## Team Members and Responsibilities
 
-1. Seppe De Witte - General app functionality.
+1. Seppe De Witte - General app functionality
 2. Joachim De Graeve - Database storage and access methods
 3. Pixie Moortgat - User interface design
 4. Munroe Herman - User interface design

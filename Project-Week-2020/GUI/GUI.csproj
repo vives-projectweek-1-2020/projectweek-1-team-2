@@ -158,5 +158,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectWeek2020Library\ProjectWeek2020Library.csproj">
+      <Project>{17832111-affd-407c-846e-91b3e54e18a2}</Project>
+      <Name>ProjectWeek2020Library</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Project_Week_2020;
 
 namespace GUI
 {
@@ -19,6 +20,8 @@ namespace GUI
     /// </summary>
     public partial class PatientLogin : Window
     {
+        DB.DBconnect DBVar = new DB.DBconnect();
+
         public PatientLogin()
         {
             InitializeComponent();
@@ -26,6 +29,7 @@ namespace GUI
 
         private void register_Click(object sender, RoutedEventArgs e)
         {
+            DBVar.Update(temperature.Text);
             PatientRegister patientregister = new PatientRegister();
             patientregister.Show();
             this.Close();
@@ -33,6 +37,7 @@ namespace GUI
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
+
             PatientMain patientmain = new PatientMain();
             patientmain.Show();
             this.Close();

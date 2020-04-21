@@ -15,12 +15,12 @@ using Project_Week_2020;
 
 namespace GUI
 {
-    /// <summary>
-    /// Interaction logic for PatientRegister.xaml
-    /// </summary>
     public partial class PatientRegister : Window
     {
         DB.DBconnect DBVar = new DB.DBconnect();
+        Email emailchecker = new Email();
+        FullName namechecker = new FullName();
+        AccessCode accesscodechecker = new AccessCode();
 
         public PatientRegister()
         {
@@ -29,11 +29,33 @@ namespace GUI
 
         private void register_Click(object sender, RoutedEventArgs e)
         {
-            DBVar.Insert(firstname.Text, lastname.Text, email.Text, "visitor", 0, false, Convert.ToInt32(accesscode.Text));
-            DBVar.CloseConnection();
-            PatientLogin patientlogin = new PatientLogin();
-            patientlogin.Show();
-            this.Close();
+            if(emailchecker.IsValidEmail(email.Text) && namechecker.IsValidName(firstname.Text, lastname.Text) && accesscodechecker.IsValidAccessCode(Convert.ToInt32(accesscode.Text)))
+            {
+                DBVar.Insert(firstname.Text, lastname.Text, email.Text, "visitor", 0, false, Convert.ToInt32(accesscode.Text));
+                DBVar.CloseConnection();
+                PatientLogin patientlogin = new PatientLogin();
+                patientlogin.Show();
+                this.Close();
+            }
+            else
+            {
+                if (!emailchecker.IsValidEmail(email.Text))
+                {
+                    MessageBox.Show("Invalid Email Address", "Nursing Home");
+                }
+                else if (!namechecker.IsValidName(firstname.Text, lastname.Text))
+                {
+                    MessageBox.Show("Invalid Name", "Nursing Home");
+                }
+                else if (!accesscodechecker.IsValidAccessCode(Convert.ToInt32(accesscode.Text)))
+                {
+                    MessageBox.Show("Invalid Access Code (must be 6 numbers long and cannot start with a 0", "Nursing Home");
+                }
+                else
+                {
+                    MessageBox.Show("There Was An Error", "Nursing Home");
+                }
+            }
         }
 
         private void return_Click(object sender, RoutedEventArgs e)

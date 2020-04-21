@@ -14,9 +14,6 @@ using System.Windows.Shapes;
 
 namespace GUI
 {
-    /// <summary>
-    /// Interaction logic for PatientMain.xaml
-    /// </summary>
     public partial class PatientMain : Window
     {
         public PatientMain()
@@ -26,7 +23,6 @@ namespace GUI
 
         private void return_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Are you sure you want to return? You will be automatically logged out", "Nursing Home");
             PatientLogin patientlogin = new PatientLogin();
             patientlogin.Show();
             this.Close();

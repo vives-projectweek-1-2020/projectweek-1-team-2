@@ -29,7 +29,6 @@ namespace GUI
 
         private void register_Click(object sender, RoutedEventArgs e)
         {
-            DBVar.Update(temperature.Text);
             PatientRegister patientregister = new PatientRegister();
             patientregister.Show();
             this.Close();

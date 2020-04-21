@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Text;
 using MySql.Data.MySqlClient;
 
-namespace ProjectWeek2020
+namespace Project_Week_2020
 {
     class DB
     {
-        class DBconnect //informatie gehaald uit https://www.codeproject.com/Articles/43438/Connect-C-to-MySQL
+        public class DBconnect //informatie gehaald uit https://www.codeproject.com/Articles/43438/Connect-C-to-MySQL
         {
             private MySqlConnection connection;
             private string Server;
@@ -18,8 +18,8 @@ namespace ProjectWeek2020
             public DBconnect()
             {
                 DataBase();
-                OpenConnection();
-                CloseConnection();
+                Insert();
+
             }
             private void DataBase()
             {
@@ -32,7 +32,7 @@ namespace ProjectWeek2020
                 connection = new MySqlConnection(connectionString);
             }
 
-            private bool OpenConnection()
+            public bool OpenConnection()
             {
                 try
                 {
@@ -54,7 +54,7 @@ namespace ProjectWeek2020
                     return false;
                 }
             }
-            private bool CloseConnection()
+            public bool CloseConnection()
             {
                 try
                 {
@@ -70,7 +70,7 @@ namespace ProjectWeek2020
 
             public void Insert()
             {
-                string query = "INSERT INTO...";
+                string query = "INSERT INTO people (name, last_name, email, type, temperature, access, access_code) VALUES('Seppe', 'DE_Witte', 'Seppe.Dewitt@gmail.com' ,'visitor', 38, False, 123456);";
                 if (this.OpenConnection() == true)
                 {
                     MySqlCommand cmd = new MySqlCommand(query, connection);

@@ -13,6 +13,7 @@ namespace ProjectWeek2020
             private string Server;
             private string databasesql;
             private string uid;
+            private string password;
 
             public DBconnect()
             {
@@ -22,11 +23,12 @@ namespace ProjectWeek2020
             }
             private void DataBase()
             {
-                Server = "localhost";
+                Server = "projectweek1.ddns.net";
                 databasesql = "nursing_home1";
-                uid = "root";
+                uid = "projectweek";
+                password = "olifant_watermeloen_balpen_vijventwintig";
                 string connectionString;
-                connectionString = "Server=" + Server + ";" + "Database= " + databasesql + ";" + "uid= " + uid + ";";
+                connectionString = "Server=" + Server + ";" + "Database= " + databasesql + ";" + "uid= " + uid + ";" + "Password=" + password + ";" ;
                 connection = new MySqlConnection(connectionString);
             }
 

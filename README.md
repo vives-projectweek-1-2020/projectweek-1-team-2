@@ -6,13 +6,13 @@ The goal of this project is to create and implement an app that can track the te
 
 ## Technical Aspects
 
-This genral working of this app aims to do the following:
+The general working of this app aims to do the following:
 
-\. Accept visitor details and temperature measurements and store this in a database.
-\. Accept resident details and temperature meaurements and store this in a database.
-\. Provide registration services for new residents and visitors.
-\. Visitors history and daily log of visitors to specific residents.
-\. Provide a report form in the event that someone becomes unwell after visting a care home.
+1. Accept visitor details and temperature measurements and store this in a database.
+2. Accept resident details and temperature meaurements and store this in a database.
+3. Provide registration services for new residents and visitors.
+4. Visitors history and daily log of visitors to specific residents.
+5. Provide a report form in the event that someone becomes unwell after visting a care home.
 
 ## Team Members and Responsibilities
 

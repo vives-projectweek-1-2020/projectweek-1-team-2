@@ -12,7 +12,7 @@ namespace Project_Week_2020
 
             // TODO Controleer of email een @ bevat
 
-            bool firstCondition = email.Contains('@');
+            bool firstCondition = email.Contains("@");
 
             // TODO Controleer of email een . bevat na de @ met minstens 1 letter tussen
             bool secondCondition = false;
@@ -22,7 +22,7 @@ namespace Project_Week_2020
             string emailMinusBeforeAt = email.Remove(0, indexofAt + 1);
 
 
-            if (emailMinusBeforeAt.Contains('.') && indexofDot >= (indexofAt + 2))
+            if (emailMinusBeforeAt.Contains(".") && indexofDot >= (indexofAt + 2))
             {
                 secondCondition = true;
             }

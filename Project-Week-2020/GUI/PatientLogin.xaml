@@ -5,8 +5,46 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        Title="PatientLogin" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="PatientLogin" Height="450" Width="1000">
+    <StackPanel>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Button x:Name="return" Content="return" Height="20" Width="50" FontSize="10" 
+                    Padding="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 5 0 0"
+                    Background="LightGray" Click="return_Click" />
+            <TextBlock Text="Patient Login" Grid.Column="1" HorizontalAlignment="Center" 
+                       Foreground="#FFEE6618" FontSize="45" FontFamily="Dead Kansas"
+                       Margin="0 20 0 0"/>
+            <TextBox x:Name="firstname" Text="First Name" Grid.Row="1" Grid.Column="1"
+                     Background="LightGray" Width="320" Height="30" TextAlignment="Center"
+                     FontSize="18" HorizontalAlignment="Left" BorderBrush="Black" />
+            <TextBox x:Name="lastname" Text="Last Name" Grid.Row="1" Grid.Column="1"
+                     Background="LightGray" Width="320" Height="30" TextAlignment="Center"
+                     FontSize="18" HorizontalAlignment="Right" BorderBrush="Black" />
+            <TextBox x:Name="accesscode" Text="Access Code" Grid.Column="1" 
+                     Grid.Row="2" TextAlignment="Center" Background="LightGray"
+                     Height="30" Width="300" FontSize="18" BorderBrush="Black" />
+            <TextBox x:Name="temperature" Text="Current Temperature" Grid.Column="1" 
+                     Grid.Row="3" TextAlignment="Center" Background="LightGray"
+                     Height="30" Width="300" FontSize="18" BorderBrush="Black" />
+            <Button x:Name="login" Content="Login" Grid.Column="1" Grid.Row="5"
+                    Width="200" Background="#FFEE6618" BorderBrush="Black"
+                    HorizontalAlignment="left" Margin="100 0 0 0" Click="login_Click" />
+            <Button x:Name="register" Content="Register" Grid.Column="1" Grid.Row="5"
+                    Width="200" Background="#FFEE6618" BorderBrush="Black" 
+                    HorizontalAlignment="right" Margin="0 0 100 0" Click="register_Click" />
+        </Grid>
+    </StackPanel>
 </Window>

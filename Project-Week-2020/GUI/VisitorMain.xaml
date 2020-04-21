@@ -8,11 +8,35 @@
         Title="VisitorMain" Height="450" Width="1000">
     <StackPanel>
         <Grid>
-            <TextBlock Text="Welcome Visitor to the Nursing home" HorizontalAlignment="Center" FontFamily="Dead Kansas" FontSize="35"/>
-        </Grid>
-        <Grid>
-            <TextBlock Text="The next thing we want to know is. Are you new to this nursing home or did you already made an account on or platform" HorizontalAlignment="Center" Margin="0 15" FontFamily="Dead Kansas" FontSize="13" />
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="50" />
+                <RowDefinition Height="20" />
+                <RowDefinition Height="50" />
+            </Grid.RowDefinitions>
+            <Button x:Name="return" Content="return" Height="20" Width="50" FontSize="10" 
+                    Padding="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 5 0 0"
+                    Background="LightGray" Click="return_Click" />
+            <TextBlock Text="Logged in as a visitor" Grid.Column="1" HorizontalAlignment="Center"
+                       VerticalAlignment="Bottom" FontSize="18"/>
+            <TextBlock Text="Welcome To The Nursing Home" HorizontalAlignment="Center" 
+                       Foreground="#FFEE6618" FontSize="45" Margin="0 0 0 25" 
+                       FontFamily="Dead Kansas" Grid.Column="1" />
+            <TextBlock Text="What would you like to do?" Grid.Column="1" Grid.Row="1"
+                       TextAlignment="Center" FontSize="18" Margin="0 10 0 0" />
+            <Button x:Name="reportcase" Content="Report a corona case" Grid.Column="1" Grid.Row="3"
+                    Width="200" Background="#FFEE6618" BorderBrush="Black"
+                    HorizontalAlignment="Center" Click="reportcase_Click" />
+            <Button x:Name="makeappointment" Content="Make an appointment" Grid.Column="1" Grid.Row="5"
+                    Width="200" Background="#FFEE6618" BorderBrush="Black"
+                    HorizontalAlignment="Center" Click="makeappointment_Click" />
         </Grid>
     </StackPanel>
-    
 </Window>

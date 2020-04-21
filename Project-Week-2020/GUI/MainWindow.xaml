@@ -28,8 +28,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="Patient" Content="Patient" Grid.Row="1" Grid.Column="0" Margin="50 0 50 0" FontSize ="24" Click="Patient_Click"/>
-            <Button x:Name="Visitor" Content="Visitor" Grid.Row="1" Grid.Column="1" Margin="50 0 50 0" FontSize="24" Click="Visitor_Click"/>
+            <Button x:Name="Patient" Content="Patient" Grid.Row="1" Grid.Column="0" Margin="50 0 50 0" FontSize ="24" Click="Patient_Click" Background="#FFEE6618" BorderBrush="Black" />
+            <Button x:Name="Visitor" Content="Visitor" Grid.Row="1" Grid.Column="1" Margin="50 0 50 0" FontSize="24" Click="Visitor_Click" Background="#FFEE6618" BorderBrush="Black" />
         </Grid>
         
     </StackPanel>

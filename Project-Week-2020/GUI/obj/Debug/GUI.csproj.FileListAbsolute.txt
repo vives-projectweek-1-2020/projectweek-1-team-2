@@ -98,6 +98,7 @@ D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.csproj.C
 D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.exe
 D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.pdb
 D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\App.baml
+<<<<<<< HEAD
 C:\Users\Herman Munroe\Desktop\Vives\Semester 2\Project week\projectweek-1-team-2\Project-Week-2020\GUI\bin\Debug\GUI.exe.config
 C:\Users\Herman Munroe\Desktop\Vives\Semester 2\Project week\projectweek-1-team-2\Project-Week-2020\GUI\bin\Debug\GUI.exe
 C:\Users\Herman Munroe\Desktop\Vives\Semester 2\Project week\projectweek-1-team-2\Project-Week-2020\GUI\bin\Debug\GUI.pdb
@@ -132,3 +133,6 @@ C:\Users\Herman Munroe\Desktop\Vives\Semester 2\Project week\projectweek-1-team-
 C:\Users\Herman Munroe\Desktop\Vives\Semester 2\Project week\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.csproj.CoreCompileInputs.cache
 C:\Users\Herman Munroe\Desktop\Vives\Semester 2\Project week\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.exe
 C:\Users\Herman Munroe\Desktop\Vives\Semester 2\Project week\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.pdb
+=======
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\App.baml
+>>>>>>> 31b68d3477a46bf795b9db51ea3694e4c343483d

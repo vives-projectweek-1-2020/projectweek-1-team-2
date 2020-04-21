@@ -1,6 +1,7 @@
 {
   "format": 1,
   "restore": {
+<<<<<<< HEAD
     "C:\\Users\\Herman Munroe\\Desktop\\Vives\\Semester 2\\Project week\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj": {}
   },
   "projects": {
@@ -12,12 +13,26 @@
         "projectPath": "C:\\Users\\Herman Munroe\\Desktop\\Vives\\Semester 2\\Project week\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj",
         "packagesPath": "C:\\Users\\Herman Munroe\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\Herman Munroe\\Desktop\\Vives\\Semester 2\\Project week\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\obj\\",
+=======
+    "E:\\Programming\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj": {}
+  },
+  "projects": {
+    "E:\\Programming\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\Programming\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj",
+        "projectName": "ProjectWeek2020",
+        "projectPath": "E:\\Programming\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\ProjectWeek2020.csproj",
+        "packagesPath": "C:\\Users\\Pixie\\.nuget\\packages\\",
+        "outputPath": "E:\\Programming\\projectweek-1-team-2\\Project-Week-2020\\ProjectWeek2020\\obj\\",
+>>>>>>> 31b68d3477a46bf795b9db51ea3694e4c343483d
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
+<<<<<<< HEAD
           "C:\\Users\\Herman Munroe\\AppData\\Roaming\\NuGet\\NuGet.Config",
+=======
+          "C:\\Users\\Pixie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+>>>>>>> 31b68d3477a46bf795b9db51ea3694e4c343483d
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.201\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.200\\RuntimeIdentifierGraph.json"
         }
       }
     }

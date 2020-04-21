@@ -1,5 +1,7 @@
 ﻿using System;
 using System.IO;
+using MySql.Data.MySqlClient;
+
 
 namespace Project_Week_2020
 {
@@ -103,6 +105,8 @@ namespace Project_Week_2020
             }
         }
 
+
+        
 
 
 

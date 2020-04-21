@@ -98,3 +98,4 @@ D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.csproj.C
 D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.exe
 D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\GUI.pdb
 D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\App.baml
+E:\Programming\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\App.baml

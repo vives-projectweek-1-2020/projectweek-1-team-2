@@ -23,5 +23,26 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void register_Click(object sender, RoutedEventArgs e)
+        {
+            PatientRegister patientregister = new PatientRegister();
+            patientregister.Show();
+            this.Close();
+        }
+
+        private void login_Click(object sender, RoutedEventArgs e)
+        {
+            PatientMain patientmain = new PatientMain();
+            patientmain.Show();
+            this.Close();
+        }
+
+        private void return_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mainwindow = new MainWindow();
+            mainwindow.Show();
+            this.Close();
+        }
     }
 }

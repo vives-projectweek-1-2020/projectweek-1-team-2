@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\GUI\obj\Debug\
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\obj\Debug\
 GUI
 none
 false
 DEBUG;TRACE
-E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\GUI\App.xaml
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\GUI\App.xaml
 10-834516255
 
-151478506588
-13-1505183044
+15-1263640013
+141497496347
 ContactHistory.xaml;MainWindow.xaml;MakeAppointment.xaml;PatientLogin.xaml;PatientMain.xaml;PatientRegister.xaml;ReportCase.xaml;VisitorLogin.xaml;VisitorMain.xaml;VisitorRegister.xaml;
 
 True

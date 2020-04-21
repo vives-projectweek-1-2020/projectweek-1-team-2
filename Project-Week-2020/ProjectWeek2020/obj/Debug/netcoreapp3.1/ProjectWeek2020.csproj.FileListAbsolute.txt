@@ -10,3 +10,15 @@ E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWee
 E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.dll
 E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.pdb
 E:\Programming\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.genruntimeconfig.cache
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.exe
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.deps.json
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.runtimeconfig.json
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.runtimeconfig.dev.json
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.dll
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\bin\Debug\netcoreapp3.1\ProjectWeek2020.pdb
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.csprojAssemblyReference.cache
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.AssemblyInfoInputs.cache
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.AssemblyInfo.cs
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.dll
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.pdb
+D:\VivesGitHub\projectweek-1-team-2\Project-Week-2020\ProjectWeek2020\obj\Debug\netcoreapp3.1\ProjectWeek2020.genruntimeconfig.cache

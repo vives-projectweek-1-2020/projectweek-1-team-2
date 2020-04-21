@@ -1,6 +1,6 @@
 ﻿using System;
 using System.IO;
-using MySql.Data.MySqlClient;
+
 
 
 namespace Project_Week_2020
@@ -19,7 +19,7 @@ namespace Project_Week_2020
         public static void RandomNumberVisitor() //generates a random number.
         {
             Random gen = new Random();
-            NumberDegreeVisitor = gen.Next(34, 41);
+            NumberDegreeVisitor = gen.Next(34, 42);
 
         }
 
@@ -106,12 +106,17 @@ namespace Project_Week_2020
         }
 
 
-        
+        //attributes
+        static public DB.DBconnect DBVar;
+        public static void DBVarCreate()
+        {
+            DBVar = new DB.DBconnect();
+        }
 
 
 
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             RandomNumberVisitor();
             RandomNumberResident();
@@ -121,6 +126,19 @@ namespace Project_Week_2020
             LastnameResident();
             SHOWVisitor();
             SHOWResident();
+            DBVarCreate();
+            
+            
+            
+
+            
+            
+            
+            
+            
+              
+            
+            
         }
     }
 }

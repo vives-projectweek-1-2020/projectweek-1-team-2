@@ -1,0 +1,17 @@
+﻿<Application x:Class="GUI.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:GUI"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="Margin" Value="10 0"/>
+            <Setter Property="FontFamily" Value="Dead Kansas"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Background" Value="White"/>
+            <Setter Property="Padding" Value="10"/>
+            <!--FontFamily="Dead Kansas" FontSize="16" Background="White" Margin="10 0" Padding="10"-->
+        </Style>
+        
+    </Application.Resources>
+</Application>

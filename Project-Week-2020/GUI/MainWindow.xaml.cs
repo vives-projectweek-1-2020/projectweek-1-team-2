@@ -30,16 +30,16 @@ namespace GUI
 
         private void Visitor_Click(object sender, RoutedEventArgs e)
         {
-            VisitorMain gamescreen = new VisitorMain();
-            gamescreen.Show();
+            VisitorLogin visitorlogin = new VisitorLogin();
+            visitorlogin.Show();
             this.Close();
         }
 
 
         private void Patient_Click(object sender, RoutedEventArgs e)
         {
-            PatientMain gamescreen = new PatientMain();
-            gamescreen.Show();
+            PatientLogin patientlogin = new PatientLogin();
+            patientlogin.Show();
             this.Close();
         }
     }

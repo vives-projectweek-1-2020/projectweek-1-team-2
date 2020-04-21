@@ -23,5 +23,27 @@ namespace GUI
         {
             InitializeComponent();
         }
+
+        private void return_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Are you sure you want to return? You will be automatically logged out", "Nursing Home");
+            VisitorLogin visitorlogin = new VisitorLogin();
+            visitorlogin.Show();
+            this.Close();
+        }
+
+        private void reportcase_Click(object sender, RoutedEventArgs e)
+        {
+            ReportCase reportcase = new ReportCase();
+            reportcase.Show();
+            this.Close();
+        }
+
+        private void makeappointment_Click(object sender, RoutedEventArgs e)
+        {
+            MakeAppointment makeappointment = new MakeAppointment();
+            makeappointment.Show();
+            this.Close();
+        }
     }
 }

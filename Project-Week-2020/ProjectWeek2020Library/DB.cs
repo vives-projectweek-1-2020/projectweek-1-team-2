@@ -3,17 +3,23 @@ using System.Collections.Generic;
 using System.Text;
 using MySql.Data.MySqlClient;
 
+
 namespace Project_Week_2020
 {
     public class DB
     {
         public class DBconnect //informatie gehaald uit https://www.codeproject.com/Articles/43438/Connect-C-to-MySQL
         {
-            private MySqlConnection connection;
+            MySqlConnection connection;
+            MySqlCommand command;
+            MySqlDataReader dataReader;
+            
             private string Server;
             private string databasesql;
             private string uid;
             private string password;
+            public bool LOGINVALID = false;
+            public string Output;
 
             public DBconnect()
             {
@@ -29,7 +35,7 @@ namespace Project_Week_2020
                 connectionString = "Server=" + Server + ";" + "Database= " + databasesql + ";" + "uid= " + uid + ";" + "Password=" + password + ";";
                 connection = new MySqlConnection(connectionString);
             }
-
+            
             public bool OpenConnection()
             {
                 try
@@ -68,9 +74,11 @@ namespace Project_Week_2020
 
             public void Insert(string firstname, string lastname, string email, string type, int temperature, bool access, int accesscode)
             {
+                //hier if statement plaatsen met valid responce van de DB
                 string query = $"INSERT INTO people (name, last_name, email, type, temperature, access, access_code) VALUES('{firstname}', '{lastname}', '{email}' ,'{type}', {temperature.ToString()}, {access.ToString()}, {accesscode});";
                 if (this.OpenConnection() == true)
                 {
+                    
                     MySqlCommand cmd = new MySqlCommand(query, connection);
                     cmd.ExecuteNonQuery();
                     this.CloseConnection();
@@ -87,6 +95,38 @@ namespace Project_Week_2020
                     cmd.CommandText = query;
                     cmd.Connection = connection;
                     cmd.ExecuteNonQuery();
+                }
+            }
+
+            
+
+
+            public void LoginCheck(string firstname, string lastname,  int accesscode)
+            {   
+
+                if (this.OpenConnection() == true)
+                {
+                    string query = $"select id, name, last_name, access_code, access, temperature from people where name = '{firstname}' AND last_name = '{lastname}' AND access_code = '{accesscode}';";
+                    
+
+                    command = new MySqlCommand(query, connection);
+                    dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        Output = Output + dataReader.GetValue(0);
+                        Console.WriteLine(Output);
+                    }
+                    if (Convert.ToInt32(dataReader.GetValue(0)) >= 0) 
+                    {
+                        LOGINVALID = true;
+                    }
+                    else
+                    {
+                        LOGINVALID = false;
+                    }
+                    
+                    
+
                 }
             }
 

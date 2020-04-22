@@ -18,14 +18,36 @@ namespace GUI
     public partial class VisitorRegister : Window
     {
         DB.DBconnect DBVar = new DB.DBconnect();
+        static public bool AccessVisitor = false;
+        static public int NumberDegreeVisitor = 0;
 
         public VisitorRegister()
         {
             InitializeComponent();
+            RandomNumberVisitor();
+            CHOICE();
+        }
+        public void RandomNumberVisitor() //generates a random number.
+        {
+            Random gen = new Random();
+            NumberDegreeVisitor = gen.Next(34, 42);
+        }
+        public void CHOICE()
+        {
+            if (NumberDegreeVisitor > 38)
+            {
+
+                AccessVisitor = default;
+            }
+            else if (NumberDegreeVisitor <= 38)
+            {
+
+                AccessVisitor = true;
+            }
         }
         private void register_Click(object sender, RoutedEventArgs e)
         {
-            DBVar.Insert(firstname.Text, lastname.Text, email.Text, "visitor", 0, false, Convert.ToInt32(accesscode.Text));
+            DBVar.Insert(firstname.Text, lastname.Text, email.Text, "visitor", NumberDegreeVisitor, AccessVisitor, Convert.ToInt32(accesscode.Text));
             DBVar.CloseConnection();
             VisitorLogin visitorlogin = new VisitorLogin();
             visitorlogin.Show();

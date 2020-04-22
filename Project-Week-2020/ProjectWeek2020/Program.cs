@@ -11,7 +11,7 @@ namespace Project_Week_2020
         static string LastNameVisitorGive = ""; //given the last name from the TextDocument
         static string FirstNameResidentGive = ""; //given the first name from the TextDocument
         static string LastNameResidentGive = ""; //given the last name from the TextDocument
-        static int NumberDegreeVisitor = 0;
+        static public int NumberDegreeVisitor = 0;
         static int NumberDegreeResident = 0;
         static public bool AccessVisitor = false;
         static public bool AccessResident = false;
@@ -67,12 +67,12 @@ namespace Project_Week_2020
 
             if (NumberDegreeVisitor > 38)
             {
-                Console.WriteLine("Sorry but your temperature is way to HIGH your access is denied at the Nursing Home.\n");
+                
                 AccessVisitor = default;
             }
             else if (NumberDegreeVisitor <= 38)
             {
-                Console.WriteLine("Welcome to the Nursing Home... but please respect the social distinsing and avoid any unnecessary contact with other people.\n");
+                
                 AccessVisitor = true;
             }
         }

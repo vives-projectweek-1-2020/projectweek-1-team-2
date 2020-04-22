@@ -17,10 +17,13 @@ namespace GUI
 {
     public partial class PatientMain : Window
     {
-        public PatientMain(string firstname)
+        DB.DBconnect DBVar;
+        public PatientMain(string firstname , DB.DBconnect DBVar)
         {
             InitializeComponent();
+            this.DBVar = DBVar;
             Patient.Text = $"Logged in as {firstname}";
+            previoustemperature.Text = $"Your previous temperature was {DBVar.userTemp}";
         }
 
         private void return_Click(object sender, RoutedEventArgs e)

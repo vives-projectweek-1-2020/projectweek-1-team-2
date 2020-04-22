@@ -45,7 +45,8 @@ namespace GUI
             DBVar.LoginCheckPatient(firstname.Text, lastname.Text, Convert.ToInt32(accesscode.Text));
             if (DBVar.LOGINVALID == true)
             {
-                PatientMain patientmain = new PatientMain(firstname.Text);
+                
+                PatientMain patientmain = new PatientMain(firstname.Text,DBVar);
                 patientmain.Show();
                 this.Close();
             }

@@ -20,12 +20,13 @@ namespace GUI
     /// </summary>
     public partial class VisitorMain : Window
     {
-        DB.DBconnect DBVar = new DB.DBconnect();
-        public VisitorMain(string firstname)
+        DB.DBconnect DBVar ;
+        public VisitorMain(string firstname, DB.DBconnect DBVar)
         {
             InitializeComponent();
+            this.DBVar = DBVar;
             Visitor.Text = $"Logged in as {firstname}";
-            previoustemperature.Text = $"Your previous temperature was {DBVar.userTemp}";
+            previoustemperature.Text = $"Your previous temperature was {DBVar.userTempVisitor}"; 
         }
         
         

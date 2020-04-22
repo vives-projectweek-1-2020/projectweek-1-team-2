@@ -20,10 +20,13 @@ namespace Project_Week_2020
             private string password;
             public bool LOGINVALID = false;
             public bool EMAILVALID = false;
+            public bool CheckValid = false;
+            public bool TEMPJA = false;
             public string Output;
             public string outputvisitor;
             public string userid;
             public string userTemp;
+            public string userTempVisitor = "";
             public int NumberDegree = 0;
 
 
@@ -31,6 +34,7 @@ namespace Project_Week_2020
             public DBconnect()
             {
                 DataBase();
+                
             }
             public void RandomNumber() //generates a random number.
             {
@@ -113,29 +117,28 @@ namespace Project_Week_2020
                     dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
+                         
                         Output = Output + dataReader.GetValue(0);
-                        userid += dataReader.GetValue(0);
-                        Console.WriteLine(userid);
-                        userTemp += dataReader.GetValue(5);
-
+                        this.userTempVisitor += dataReader.GetValue(5); //hier krijgen we temperature
+                        Console.WriteLine(userTempVisitor);
 
 
                     }
                     if (dataReader.HasRows) 
                     {
                         LOGINVALID = true;
+                        CheckValid = true;
                     }
                     else
                     {
                         LOGINVALID = false;
                     }
 
-                    
-                    
-
                 }
             }
 
+            
+            
             public void LoginCheckPatient(string firstname, string lastname, int accesscode)
             {
 
@@ -149,10 +152,9 @@ namespace Project_Week_2020
                     while (dataReader.Read())
                     {
                         Output = Output + dataReader.GetValue(0);
-                        userid += dataReader.GetValue(0);
-                        userTemp += dataReader.GetValue(5);
-                        
-                        
+                        this.userTemp += dataReader.GetValue(5); //hier krijgen we temperature
+                        Console.WriteLine(userTemp);
+
                     }
                     if (dataReader.HasRows)
                     {
@@ -164,44 +166,23 @@ namespace Project_Week_2020
                     }
 
 
-
-
                 }
             }
-            public void USERID()
-            {
-                if (this.OpenConnection() == true)
-                {
-                    string query = $"select id * from people";
 
 
-                    command = new MySqlCommand(query, connection);
-                    dataReader = command.ExecuteReader();
-                    while (dataReader.Read())
-                    {
-                        userid += dataReader.GetValue(0);
-                        Console.WriteLine(userid);
-
-                    }
-
-
-                }
-            }
             
-
-
-            public void UpdateTemperature(string data)
-            {
-                string query = $"update people set temperature = {NumberDegree} where id = {userid};";
-                if (this.OpenConnection() == true)
+                public void UpdateTemperature()
                 {
+                    string query = $"update people set temperature = {NumberDegree} where id = {userid};";
+                    if (this.OpenConnection() == true)
+                    {
 
-                    MySqlCommand cmd = new MySqlCommand();
-                    cmd.CommandText = query;
-                    cmd.Connection = connection;
-                    cmd.ExecuteNonQuery();
-                }
-            }
+                        MySqlCommand cmd = new MySqlCommand();
+                        cmd.CommandText = query;
+                        cmd.Connection = connection;
+                        cmd.ExecuteNonQuery();
+                    }
+                } 
 
             public void EmailChecker(string email)
             {

@@ -42,7 +42,8 @@ namespace GUI
             DBVar.LoginCheckVisitor(firstname.Text, lastname.Text, Convert.ToInt32(accesscode.Text));
             if (DBVar.LOGINVALID == true)
             {
-                VisitorMain visitor = new VisitorMain(firstname.Text);
+                
+                VisitorMain visitor = new VisitorMain(firstname.Text, DBVar);
                 visitor.Show();
                 this.Close();
             }

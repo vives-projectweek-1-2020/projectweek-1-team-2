@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Project_Week_2020;
 
 namespace GUI
 {
@@ -19,11 +20,15 @@ namespace GUI
     /// </summary>
     public partial class VisitorMain : Window
     {
-        public VisitorMain()
+        DB.DBconnect DBVar = new DB.DBconnect();
+        public VisitorMain(string firstname)
         {
             InitializeComponent();
+            Visitor.Text = $"Logged in as {firstname}";
+            previoustemperature.Text = $"Your previous temperature was {DBVar.userTemp}";
         }
-
+        
+        
         private void return_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Are you sure you want to return? You will be automatically logged out", "Nursing Home");

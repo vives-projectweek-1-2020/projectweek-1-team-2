@@ -27,6 +27,7 @@ namespace GUI
         {
             InitializeComponent();
             
+
         }
 
         private void register_Click(object sender, RoutedEventArgs e)
@@ -36,7 +37,7 @@ namespace GUI
             this.Close();
 
         }
-        //firstname.Text = "";
+        
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
@@ -44,7 +45,7 @@ namespace GUI
             DBVar.LoginCheckPatient(firstname.Text, lastname.Text, Convert.ToInt32(accesscode.Text));
             if (DBVar.LOGINVALID == true)
             {
-                PatientMain patientmain = new PatientMain();
+                PatientMain patientmain = new PatientMain(firstname.Text);
                 patientmain.Show();
                 this.Close();
             }
@@ -63,6 +64,24 @@ namespace GUI
             MainWindow mainwindow = new MainWindow();
             mainwindow.Show();
             this.Close();
+        }
+
+        private void firstname_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            firstname.Text = "";
+            firstname.Focus();
+        }
+
+        private void lastname_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            lastname.Text = "";
+            lastname.Focus();
+        }
+
+        private void accesscode_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            accesscode.Text = "";
+            accesscode.Focus();
         }
     }
 }

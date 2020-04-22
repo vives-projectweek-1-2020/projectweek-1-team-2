@@ -11,14 +11,16 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Project_Week_2020;
 
 namespace GUI
 {
     public partial class PatientMain : Window
     {
-        public PatientMain()
+        public PatientMain(string firstname)
         {
             InitializeComponent();
+            Patient.Text = $"Logged in as {firstname}";
         }
 
         private void return_Click(object sender, RoutedEventArgs e)

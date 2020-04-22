@@ -110,6 +110,31 @@ namespace GUI
             visitorlogin.Show();
 
         }
+
+        private void firstname_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            firstname.Text = "";
+            firstname.Focus();
+        }
+
+        private void lastname_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            lastname.Text = "";
+            lastname.Focus();
+
+        }
+
+        private void accesscode_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            accesscode.Text = "";
+            accesscode.Focus();
+        }
+
+        private void email_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            email.Text = "";
+            email.Focus();
+        }
     }
 }
 

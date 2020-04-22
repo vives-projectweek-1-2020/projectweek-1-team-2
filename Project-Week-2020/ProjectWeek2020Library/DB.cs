@@ -22,11 +22,20 @@ namespace Project_Week_2020
             public bool EMAILVALID = false;
             public string Output;
             public string outputvisitor;
-            
+            public string userid;
+            public string userTemp;
+            public int NumberDegree = 0;
+
+
 
             public DBconnect()
             {
                 DataBase();
+            }
+            public void RandomNumber() //generates a random number.
+            {
+                Random gen = new Random();
+                NumberDegree = gen.Next(34, 42);
             }
             private void DataBase()
             {
@@ -70,7 +79,7 @@ namespace Project_Week_2020
                 }
                 catch (MySqlException ex)
                 {
-                    Console.WriteLine($"{ex.Message}");
+                    
                     return false;
                 }
             }
@@ -87,19 +96,7 @@ namespace Project_Week_2020
                     this.CloseConnection();
                 }
             }
-
-            public void Update(string data)
-            {
-                string query = $"Update {data}";
-                if (this.OpenConnection() == true)
-                {
-
-                    MySqlCommand cmd = new MySqlCommand();
-                    cmd.CommandText = query;
-                    cmd.Connection = connection;
-                    cmd.ExecuteNonQuery();
-                }
-            }
+            
 
             
 
@@ -117,7 +114,11 @@ namespace Project_Week_2020
                     while (dataReader.Read())
                     {
                         Output = Output + dataReader.GetValue(0) + dataReader.GetValue(6);
-                        Console.WriteLine(Output);
+                        userTemp += dataReader.GetValue(5);
+                        userid +=  dataReader.GetValue(0);
+                        Console.WriteLine(userTemp);
+
+
                     }
                     if (dataReader.HasRows) 
                     {
@@ -147,7 +148,10 @@ namespace Project_Week_2020
                     while (dataReader.Read())
                     {
                         Output = Output + dataReader.GetValue(0) + dataReader.GetValue(6);
-                        Console.WriteLine(Output);
+                        
+                        userid+= dataReader.GetValue(0);
+                        userTemp += dataReader.GetValue(5);
+                        
                     }
                     if (dataReader.HasRows)
                     {
@@ -161,6 +165,20 @@ namespace Project_Week_2020
 
 
 
+                }
+            }
+            
+
+            public void UpdateTemperature(string data)
+            {
+                string query = $"update people set temperature = {NumberDegree} where id = {userid};";
+                if (this.OpenConnection() == true)
+                {
+
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.CommandText = query;
+                    cmd.Connection = connection;
+                    cmd.ExecuteNonQuery();
                 }
             }
 

@@ -26,6 +26,7 @@ namespace GUI
         public PatientLogin()
         {
             InitializeComponent();
+            
         }
 
         private void register_Click(object sender, RoutedEventArgs e)
@@ -33,7 +34,9 @@ namespace GUI
             PatientRegister patientregister = new PatientRegister();
             patientregister.Show();
             this.Close();
+
         }
+        //firstname.Text = "";
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
@@ -52,7 +55,7 @@ namespace GUI
                 //DBVar.Insert(firstname.Text, lastname.Text, email.Text, "Resident", NumberDegreeResident, AccessResident, Convert.ToInt32(accesscode.Text));
                 
                 DBVar.CloseConnection();
-                
+
         }
 
         private void return_Click(object sender, RoutedEventArgs e)

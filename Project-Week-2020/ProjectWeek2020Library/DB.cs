@@ -19,8 +19,10 @@ namespace Project_Week_2020
             private string uid;
             private string password;
             public bool LOGINVALID = false;
+            public bool EMAILVALID = false;
             public string Output;
             public string outputvisitor;
+            
 
             public DBconnect()
             {
@@ -160,6 +162,36 @@ namespace Project_Week_2020
 
 
                 }
+            }
+
+            public void EmailChecker(string email)
+            {
+
+
+                if (OpenConnection() == true)
+                {
+                    string query = $"select email from people where email = '{email}';";
+                    command = new MySqlCommand(query, connection);
+
+                    dataReader = command.ExecuteReader();
+
+
+                    while (dataReader.Read())
+                    {
+                        Output = Output + dataReader.GetValue(0);
+                        Console.WriteLine(Output);
+                    }
+                    if (dataReader.HasRows)
+                    {
+                        EMAILVALID = true;
+                    }
+                    else
+                    {
+                        EMAILVALID = false;
+                    }
+                    CloseConnection();
+                }
+
             }
             public void VISITORCOUNT()
             {

@@ -35,7 +35,7 @@
                      FontSize="18" HorizontalAlignment="Right" BorderBrush="Black" />
             <TextBox x:Name="accesscode" Text="Access Code" Grid.Column="1" 
                      Grid.Row="2" TextAlignment="Center" Background="LightGray"
-                     Height="30" Width="300" FontSize="18" BorderBrush="Black" />
+                     Height="30" Width="300" FontSize="18" BorderBrush="Black"  />
             <TextBox x:Name="temperature" Text="Current Temperature" Grid.Column="1" 
                      Grid.Row="3" TextAlignment="Center" Background="LightGray"
                      Height="30" Width="300" FontSize="18" BorderBrush="Black" />

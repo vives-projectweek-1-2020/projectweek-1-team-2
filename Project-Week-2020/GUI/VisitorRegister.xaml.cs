@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Project_Week_2020;
+using MySql.Data.MySqlClient;
 
 namespace GUI
 {
@@ -20,12 +21,20 @@ namespace GUI
         DB.DBconnect DBVar = new DB.DBconnect();
         static public bool AccessVisitor = false;
         static public int NumberDegreeVisitor = 0;
+        
+        Email emailchecker = new Email();
+        FullName namechecker = new FullName();
+        AccessCode accesscodechecker = new AccessCode();
+
+        public string Output;
 
         public VisitorRegister()
         {
             InitializeComponent();
             RandomNumberVisitor();
             CHOICE();
+
+
         }
         public void RandomNumberVisitor() //generates a random number.
         {
@@ -47,18 +56,61 @@ namespace GUI
         }
         private void register_Click(object sender, RoutedEventArgs e)
         {
-            DBVar.Insert(firstname.Text, lastname.Text, email.Text, "visitor", NumberDegreeVisitor, AccessVisitor, Convert.ToInt32(accesscode.Text));
-            DBVar.CloseConnection();
-            VisitorLogin visitorlogin = new VisitorLogin();
-            visitorlogin.Show();
-            this.Close();
+            if (emailchecker.IsValidEmail(email.Text) && namechecker.IsValidName(firstname.Text, lastname.Text) && accesscodechecker.IsValidAccessCode(Convert.ToInt32(accesscode.Text)))
+            {
+
+                {
+
+
+                    DBVar.EmailChecker(email.Text);
+                    if (DBVar.EMAILVALID == true)
+                    {
+                        MessageBox.Show("There is already an account with this email.");
+
+                    }
+                    else
+                    {
+                        DBVar.Insert(firstname.Text, lastname.Text, email.Text, "Resident", NumberDegreeVisitor, AccessVisitor, Convert.ToInt32(accesscode.Text));
+                        VisitorLogin visitorlogin = new VisitorLogin();
+                        visitorlogin.Show();
+                        this.Close();
+                    }
+
+                    DBVar.CloseConnection();
+
+
+                }
+            }
+            else
+            {
+                if (!emailchecker.IsValidEmail(email.Text))
+                {
+                    MessageBox.Show("Invalid Email Address", "Nursing Home");
+                }
+                else if (!namechecker.IsValidName(firstname.Text, lastname.Text))
+                {
+                    MessageBox.Show("Invalid Name", "Nursing Home");
+                }
+                else if (!accesscodechecker.IsValidAccessCode(Convert.ToInt32(accesscode.Text)))
+                {
+                    MessageBox.Show("Invalid Access Code (must be 6 numbers long and cannot start with a 0", "Nursing Home");
+                }
+                else
+                {
+                    MessageBox.Show("There Was An Error", "Nursing Home");
+                }
+            }
         }
+
+
 
         private void return_Click(object sender, RoutedEventArgs e)
         {
             VisitorLogin visitorlogin = new VisitorLogin();
             visitorlogin.Show();
-            this.Close();
+
         }
     }
 }
+
+

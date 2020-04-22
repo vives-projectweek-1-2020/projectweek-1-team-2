@@ -57,11 +57,31 @@ public PatientRegister()
         {
             if(emailchecker.IsValidEmail(email.Text) && namechecker.IsValidName(firstname.Text, lastname.Text) && accesscodechecker.IsValidAccessCode(Convert.ToInt32(accesscode.Text)))
             {
-                DBVar.Insert(firstname.Text, lastname.Text, email.Text, "Resident", NumberDegreeResident, AccessResident, Convert.ToInt32(accesscode.Text));
-                DBVar.CloseConnection();
-                PatientLogin patientlogin = new PatientLogin();
-                patientlogin.Show();
-                this.Close();
+                
+                {
+
+
+                    DBVar.EmailChecker(email.Text);
+                    if (DBVar.EMAILVALID == true)
+                    {
+                        MessageBox.Show("There is already an account with this email.");
+
+                    }
+                    else
+                    {
+                        DBVar.Insert(firstname.Text, lastname.Text, email.Text, "Resident", NumberDegreeResident, AccessResident, Convert.ToInt32(accesscode.Text));
+                        VisitorLogin visitorlogin = new VisitorLogin();
+                        visitorlogin.Show();
+                        this.Close();
+                    }
+
+
+                    DBVar.CloseConnection();
+
+
+
+
+                }
             }
             else
             {

@@ -113,10 +113,11 @@ namespace Project_Week_2020
                     dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        Output = Output + dataReader.GetValue(0) + dataReader.GetValue(6);
+                        Output = Output + dataReader.GetValue(0);
+                        userid += dataReader.GetValue(0);
+                        Console.WriteLine(userid);
                         userTemp += dataReader.GetValue(5);
-                        userid +=  dataReader.GetValue(0);
-                        Console.WriteLine(userTemp);
+
 
 
                     }
@@ -147,10 +148,10 @@ namespace Project_Week_2020
                     dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        Output = Output + dataReader.GetValue(0) + dataReader.GetValue(6);
-                        
-                        userid+= dataReader.GetValue(0);
+                        Output = Output + dataReader.GetValue(0);
+                        userid += dataReader.GetValue(0);
                         userTemp += dataReader.GetValue(5);
+                        
                         
                     }
                     if (dataReader.HasRows)
@@ -167,7 +168,27 @@ namespace Project_Week_2020
 
                 }
             }
+            public void USERID()
+            {
+                if (this.OpenConnection() == true)
+                {
+                    string query = $"select id * from people";
+
+
+                    command = new MySqlCommand(query, connection);
+                    dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        userid += dataReader.GetValue(0);
+                        Console.WriteLine(userid);
+
+                    }
+
+
+                }
+            }
             
+
 
             public void UpdateTemperature(string data)
             {
@@ -197,7 +218,7 @@ namespace Project_Week_2020
                     while (dataReader.Read())
                     {
                         Output = Output + dataReader.GetValue(0);
-                        Console.WriteLine(Output);
+                        
                     }
                     if (dataReader.HasRows)
                     {
@@ -211,6 +232,8 @@ namespace Project_Week_2020
                 }
 
             }
+            
+            
             public void VISITORCOUNT()
             {
                 if (this.OpenConnection() == true)
@@ -223,9 +246,12 @@ namespace Project_Week_2020
                     while (dataReader.Read())
                     {
                         outputvisitor = outputvisitor + dataReader.GetValue(0);
-                        Console.WriteLine(outputvisitor);
+                        
+
+
+
                     }
-                   
+
 
                 }
             }

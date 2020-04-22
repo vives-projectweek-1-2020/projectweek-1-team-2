@@ -15,9 +15,6 @@ using Project_Week_2020;
 
 namespace GUI
 {
-    /// <summary>
-    /// Interaction logic for VisitorRegister.xaml
-    /// </summary>
     public partial class VisitorRegister : Window
     {
         DB.DBconnect DBVar = new DB.DBconnect();

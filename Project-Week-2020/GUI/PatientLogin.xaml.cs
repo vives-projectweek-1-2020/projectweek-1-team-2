@@ -15,9 +15,6 @@ using Project_Week_2020;
 
 namespace GUI
 {
-    /// <summary>
-    /// Interaction logic for PatientLogin.xaml
-    /// </summary>
     public partial class PatientLogin : Window
     {
         DB.DBconnect DBVar = new DB.DBconnect();
@@ -29,7 +26,6 @@ namespace GUI
 
         private void register_Click(object sender, RoutedEventArgs e)
         {
-            DBVar.Update(temperature.Text);
             PatientRegister patientregister = new PatientRegister();
             patientregister.Show();
             this.Close();

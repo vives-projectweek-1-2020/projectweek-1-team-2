@@ -4,23 +4,18 @@ using System.Text;
 
 namespace Project_Week_2020
 {
-    class Email
+    public class Email
     {
         public bool IsValidEmail(string email)
         {
             bool isValid = false;
-
-            // TODO Controleer of email een @ bevat
-
             bool firstCondition = email.Contains("@");
-
-            // TODO Controleer of email een . bevat na de @ met minstens 1 letter tussen
             bool secondCondition = false;
-
+            bool thirdCondition = false;
+            bool fourthCondition = false;
             int indexofAt = email.IndexOf('@');
             int indexofDot = email.LastIndexOf('.');
             string emailMinusBeforeAt = email.Remove(0, indexofAt + 1);
-
 
             if (emailMinusBeforeAt.Contains(".") && indexofDot >= (indexofAt + 2))
             {
@@ -31,8 +26,6 @@ namespace Project_Week_2020
                 secondCondition = false;
             }
 
-            // TODO Controleer of er minstens 1 letter voor de @ staat
-            bool thirdCondition = false;
             if (indexofAt >= 1)
             {
                 thirdCondition = true;
@@ -42,8 +35,6 @@ namespace Project_Week_2020
                 thirdCondition = false;
             }
 
-            // TODO Controleer of er na het laatste punt nog minstens 1 letter komt
-            bool fourthCondition = false;
 
             if (indexofDot < email.Length - 1)
             {

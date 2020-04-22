@@ -20,7 +20,6 @@ namespace Project_Week_2020
         {
             Random gen = new Random();
             NumberDegreeVisitor = gen.Next(34, 42);
-
         }
 
         static void FirstNameCostumerTXT() //gives the first name of the person
@@ -29,7 +28,6 @@ namespace Project_Week_2020
             Random generator = new Random();
             int index = generator.Next(FirstName.Length);
             FirstNameVisitorGive = FirstName[index].ToUpper();
-
         }
 
         static void LastNameCostumerTXT() // gives the last name of the person
@@ -38,10 +36,7 @@ namespace Project_Week_2020
             Random generator = new Random();
             int index = generator.Next(LastName.Length);
             LastNameVisitorGive = LastName[index].ToUpper();
-
         }
-
-
 
         public static void FirstnameResident()
         {
@@ -49,7 +44,6 @@ namespace Project_Week_2020
             Random generator = new Random();
             int index = generator.Next(FirstName.Length);
             FirstNameResidentGive = FirstName[index].ToUpper();
-
         }
 
         public static void LastnameResident()
@@ -58,15 +52,12 @@ namespace Project_Week_2020
             Random generator = new Random();
             int index = generator.Next(FirstName.Length);
             LastNameResidentGive = FirstName[index].ToUpper();
-
         }
         public static void RandomNumberResident() //generates a random number.
         {
             Random gen = new Random();
             NumberDegreeResident = gen.Next(34, 41);
-
         }
-
 
         public static void SHOWVisitor() //shows the first name + last name + the temperature of the person.
         {
@@ -78,7 +69,6 @@ namespace Project_Week_2020
             {
                 Console.WriteLine("Sorry but your temperature is way to HIGH your access is denied at the Nursing Home.\n");
                 AccessVisitor = default;
-
             }
             else if (NumberDegreeVisitor <= 38)
             {
@@ -86,6 +76,7 @@ namespace Project_Week_2020
                 AccessVisitor = true;
             }
         }
+
         public static void SHOWResident() //shows the first name + last name + the temperature of the person.
         {
             Console.WriteLine($"Welcome {FirstNameResidentGive} {LastNameResidentGive}");
@@ -96,7 +87,6 @@ namespace Project_Week_2020
             {
                 Console.WriteLine("Sorry but your temperature is way to HIGH your access is denied at the Nursing Home.\n");
                 AccessResident = default;
-
             }
             else if (NumberDegreeResident <= 38)
             {
@@ -105,16 +95,12 @@ namespace Project_Week_2020
             }
         }
 
-
         //attributes
         static public DB.DBconnect DBVar;
         public static void DBVarCreate()
         {
             DBVar = new DB.DBconnect();
         }
-
-
-
 
         public static void Main(string[] args)
         {
@@ -127,18 +113,6 @@ namespace Project_Week_2020
             SHOWVisitor();
             SHOWResident();
             DBVarCreate();
-            
-            
-            
-
-            
-            
-            
-            
-            
-              
-            
-            
         }
     }
 }

@@ -17,8 +17,8 @@ namespace Project_Week_2020
 
             public DBconnect()
             {
-                DataBase();
-                Insert();
+                //DataBase();
+                //Insert();
 
             }
             private void DataBase()

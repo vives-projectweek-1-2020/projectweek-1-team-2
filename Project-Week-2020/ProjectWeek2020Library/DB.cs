@@ -20,6 +20,7 @@ namespace Project_Week_2020
             private string password;
             public bool LOGINVALID = false;
             public string Output;
+            public string outputvisitor;
 
             public DBconnect()
             {
@@ -101,22 +102,22 @@ namespace Project_Week_2020
             
 
 
-            public void LoginCheck(string firstname, string lastname,  int accesscode)
+            public void LoginCheckVisitor(string firstname, string lastname,  int accesscode)
             {   
 
                 if (this.OpenConnection() == true)
                 {
-                    string query = $"select id, name, last_name, access_code, access, temperature from people where name = '{firstname}' AND last_name = '{lastname}' AND access_code = '{accesscode}';";
+                    string query = $"select id, name, last_name, access_code, access, temperature, type from people where name = '{firstname}' AND last_name = '{lastname}' AND access_code = '{accesscode}' AND type='visitor';";
                     
 
                     command = new MySqlCommand(query, connection);
                     dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                        Output = Output + dataReader.GetValue(0);
+                        Output = Output + dataReader.GetValue(0) + dataReader.GetValue(6);
                         Console.WriteLine(Output);
                     }
-                    if (Convert.ToInt32(dataReader.GetValue(0)) >= 0) 
+                    if (dataReader.HasRows) 
                     {
                         LOGINVALID = true;
                     }
@@ -124,8 +125,57 @@ namespace Project_Week_2020
                     {
                         LOGINVALID = false;
                     }
+
                     
                     
+
+                }
+            }
+
+            public void LoginCheckPatient(string firstname, string lastname, int accesscode)
+            {
+
+                if (this.OpenConnection() == true)
+                {
+                    string query = $"select id, name, last_name, access_code, access, temperature, type from people where name = '{firstname}' AND last_name = '{lastname}' AND access_code = '{accesscode}' AND type='resident';";
+
+
+                    command = new MySqlCommand(query, connection);
+                    dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        Output = Output + dataReader.GetValue(0) + dataReader.GetValue(6);
+                        Console.WriteLine(Output);
+                    }
+                    if (dataReader.HasRows)
+                    {
+                        LOGINVALID = true;
+                    }
+                    else
+                    {
+                        LOGINVALID = false;
+                    }
+
+
+
+
+                }
+            }
+            public void VISITORCOUNT()
+            {
+                if (this.OpenConnection() == true)
+                {
+                    string query = $"select count(id) from people where type= 'Visitor';";
+
+
+                    command = new MySqlCommand(query, connection);
+                    dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        outputvisitor = outputvisitor + dataReader.GetValue(0);
+                        Console.WriteLine(outputvisitor);
+                    }
+                   
 
                 }
             }

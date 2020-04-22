@@ -38,7 +38,7 @@ namespace GUI
         private void login_Click(object sender, RoutedEventArgs e)
         {
 
-            DBVar.LoginCheck(firstname.Text, lastname.Text, Convert.ToInt32(accesscode.Text));
+            DBVar.LoginCheckPatient(firstname.Text, lastname.Text, Convert.ToInt32(accesscode.Text));
             if (DBVar.LOGINVALID == true)
             {
                 PatientMain patientmain = new PatientMain();

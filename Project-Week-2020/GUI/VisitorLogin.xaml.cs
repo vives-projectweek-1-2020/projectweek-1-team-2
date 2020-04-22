@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Project_Week_2020;
 
 namespace GUI
 {
@@ -19,6 +20,10 @@ namespace GUI
     /// </summary>
     public partial class VisitorLogin : Window
     {
+        DB.DBconnect DBVar = new DB.DBconnect();
+        Email emailchecker = new Email();
+        FullName namechecker = new FullName();
+        AccessCode accesscodechecker = new AccessCode();
         public VisitorLogin()
         {
             InitializeComponent();
@@ -33,9 +38,20 @@ namespace GUI
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
-            VisitorMain visitormain = new VisitorMain();
-            visitormain.Show();
-            this.Close();
+            DBVar.LoginCheckVisitor(firstname.Text, lastname.Text, Convert.ToInt32(accesscode.Text));
+            if (DBVar.LOGINVALID == true)
+            {
+                PatientMain patientmain = new PatientMain();
+                patientmain.Show();
+                this.Close();
+            }
+            else
+            {
+                MessageBox.Show("Your Name, LastName OR AccessCode is wrong... Please try again!");
+            }
+            //DBVar.Insert(firstname.Text, lastname.Text, email.Text, "Resident", NumberDegreeResident, AccessResident, Convert.ToInt32(accesscode.Text));
+
+            DBVar.CloseConnection();
         }
 
         private void return_Click(object sender, RoutedEventArgs e)

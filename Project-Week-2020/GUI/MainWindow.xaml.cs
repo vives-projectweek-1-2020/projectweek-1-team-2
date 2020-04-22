@@ -33,16 +33,9 @@ namespace GUI
 
         public void VisitorCounter()
         {
-            DBVar.OpenConnection();
-            string query = $"select count(id) from people;";
-            DBVar.command = new MySqlCommand(query, connection);
-            dataReader = command.ExecuteReader();
-            while (dataReader.Read())
-            {
-                Output = Output + dataReader.GetValue(0);
-                Console.WriteLine(Output);
-                TotalVisitors.Text = $"Total Visitors = {Output}";
-            }
+           
+            DBVar.VISITORCOUNT();
+            TotalVisitors.Text = $"TotalVisitors = {DBVar.outputvisitor}";
         }
 
         private void Visitor_Click(object sender, RoutedEventArgs e)

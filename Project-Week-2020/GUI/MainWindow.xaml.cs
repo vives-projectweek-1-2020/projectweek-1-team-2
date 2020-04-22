@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Project_Week_2020;
+using MySql.Data.dll;
 using MySql.Data.MySqlClient;
 
 namespace GUI

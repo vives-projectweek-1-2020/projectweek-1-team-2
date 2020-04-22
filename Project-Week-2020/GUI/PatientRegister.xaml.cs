@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Project_Week_2020;
 
+
 namespace GUI
 {
     public partial class PatientRegister : Window
@@ -21,17 +22,42 @@ namespace GUI
         Email emailchecker = new Email();
         FullName namechecker = new FullName();
         AccessCode accesscodechecker = new AccessCode();
+        private int NumberDegreeResident = 0;
+        static public bool AccessResident = false;
+        
 
-        public PatientRegister()
+        
+
+public PatientRegister()
         {
             InitializeComponent();
+            RandomNumberVisitor();
+            CHOICE();
+        }
+        public void RandomNumberVisitor() //generates a random number.
+        {
+            Random gen = new Random();
+            NumberDegreeResident = gen.Next(34, 42);
+        }
+        public void CHOICE()
+        {
+            if (NumberDegreeResident > 38)
+            {
+
+                AccessResident = default;
+            }
+            else if (NumberDegreeResident <= 38)
+            {
+
+                AccessResident = true;
+            }
         }
 
         private void register_Click(object sender, RoutedEventArgs e)
         {
             if(emailchecker.IsValidEmail(email.Text) && namechecker.IsValidName(firstname.Text, lastname.Text) && accesscodechecker.IsValidAccessCode(Convert.ToInt32(accesscode.Text)))
             {
-                DBVar.Insert(firstname.Text, lastname.Text, email.Text, "visitor", 0, false, Convert.ToInt32(accesscode.Text));
+                DBVar.Insert(firstname.Text, lastname.Text, email.Text, "Resident", NumberDegreeResident, AccessResident, Convert.ToInt32(accesscode.Text));
                 DBVar.CloseConnection();
                 PatientLogin patientlogin = new PatientLogin();
                 patientlogin.Show();

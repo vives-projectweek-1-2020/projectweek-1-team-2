@@ -70,7 +70,7 @@ namespace Project_Week_2020
 
             public void Insert()
             {
-                string query = "INSERT INTO people (name, last_name, email, type, temperature, access, access_code) VALUES('Seppe', 'DE_Witte', 'Seppe.Dewitt@gmail.com' ,'visitor', 38, False, 123456);";
+                string query = "INSERT INTO people (name, last_name, email, type, temperature, access, access_code) VALUES('Sille', 'Van_landschoot', 'Sille.Vanlandschoot@gmail.com' ,'resident', 38, False, 123456);";
                 if (this.OpenConnection() == true)
                 {
                     MySqlCommand cmd = new MySqlCommand(query, connection);

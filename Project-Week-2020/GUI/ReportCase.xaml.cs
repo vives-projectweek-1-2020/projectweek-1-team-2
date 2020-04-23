@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Project_Week_2020;
 
 namespace GUI
 {
@@ -19,9 +20,19 @@ namespace GUI
     /// </summary>
     public partial class ReportCase : Window
     {
-        public ReportCase()
+        DB.DBconnect DBVar;
+        public ReportCase(DB.DBconnect DBVar)
         {
             InitializeComponent();
+            this.DBVar = DBVar;
+        }
+
+
+        private void return_Click_1(object sender, RoutedEventArgs e)
+        {
+            VisitorLogin visitorLogin = new VisitorLogin();
+            visitorLogin.Show();
+            this.Close();
         }
     }
 }

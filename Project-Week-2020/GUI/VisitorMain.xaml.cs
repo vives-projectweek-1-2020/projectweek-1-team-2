@@ -56,7 +56,7 @@ namespace GUI
 
         private void reportcase_Click(object sender, RoutedEventArgs e)
         {
-            ReportCase reportcase = new ReportCase();
+            ReportCase reportcase = new ReportCase(DBVar);
             reportcase.Show();
             this.Close();
         }

@@ -70,8 +70,8 @@ public PatientRegister()
                     else
                     {
                         DBVar.Insert(firstname.Text, lastname.Text, email.Text, "Resident", NumberDegreeResident, AccessResident, Convert.ToInt32(accesscode.Text));
-                        VisitorLogin visitorlogin = new VisitorLogin();
-                        visitorlogin.Show();
+                        PatientLogin patientLogin = new PatientLogin();
+                        patientLogin.Show();
                         this.Close();
                     }
 

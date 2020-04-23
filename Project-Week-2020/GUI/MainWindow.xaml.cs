@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Project_Week_2020;
+using System.Media;
 
 using MySql.Data.MySqlClient;
 
@@ -30,7 +31,14 @@ namespace GUI
         {
             InitializeComponent();
             VisitorCounter();
+            //Sound();
         }
+        /*private void Sound()
+        {
+            var player = new SoundPlayer("./"); //hier de wav file
+            player.Load();
+            player.Play();
+        }*/
 
         public void VisitorCounter()
         {

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="ReportCase" Height="450" Width="800">
-    <Grid>
+    <StackPanel Background="#171717">
         
-    </Grid>
+    </StackPanel>
 </Window>

@@ -7,18 +7,18 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="MainWindow" Height="450" Width="1000">
-    <StackPanel>
+    <StackPanel Background="#171717">
         <Grid>
-            <TextBlock Text="Welcome To The Nursing Home" HorizontalAlignment="Center" Foreground="#FFEE6618" FontSize="45" Margin="0 0 0 25" FontFamily="Dead Kansas"/>
+            <TextBlock Text="Welcome To The Nursing Home" HorizontalAlignment="Center" Foreground="#F25050" FontSize="45" Margin="0 0 0 25" FontFamily="Dead Kansas"/>
         </Grid>
         <Grid>
-            <TextBlock  Text="In the nursing home we follow all the rules of the government strictly so please adhere to the social distancing rules and wash your hands!"  HorizontalAlignment="Center" FontFamily="Dead Kansas" FontSize="14"/>
+            <TextBlock Foreground="#F25050" Text="In the nursing home we follow all the rules of the government strictly so please adhere to the social distancing rules and wash your hands!"  HorizontalAlignment="Center" FontFamily="Dead Kansas" FontSize="14"/>
         </Grid>
         <Grid>
-            <TextBlock Text="For everyone's safety please provide the details asked, correctly, and have a pleasant day." Margin="0 10 0 10" HorizontalAlignment="Center" FontFamily="Dead Kansas" FontSize="14"/>
+            <TextBlock Foreground="#F25050" Text="For everyone's safety please provide the details asked, correctly, and have a pleasant day." Margin="0 10 0 10" HorizontalAlignment="Center" FontFamily="Dead Kansas" FontSize="14"/>
         </Grid>
         <Grid>
-            <TextBlock Text="Total Visitors = ..." x:Name="TotalVisitors" HorizontalAlignment="Center" FontFamily="Dead Kansas" Margin="0 10 0 50" FontSize="32"/>
+            <TextBlock Foreground="#F25050" Text="Total Visitors = ..." x:Name="TotalVisitors" HorizontalAlignment="Center" FontFamily="Dead Kansas" Margin="0 10 0 50" FontSize="32"/>
         </Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -29,8 +29,8 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button x:Name="Patient" Content="Patient" Grid.Row="1" Grid.Column="0" Margin="50 0 50 0" FontSize ="24" Click="Patient_Click" Background="#FFEE6618" BorderBrush="Black" />
-            <Button x:Name="Visitor" Content="Visitor" Grid.Row="1" Grid.Column="1" Margin="50 0 50 0" FontSize="24" Click="Visitor_Click" Background="#FFEE6618" BorderBrush="Black" />
+            <Button x:Name="Patient" Content="Patient" Grid.Row="1" Grid.Column="0" Margin="50 0 50 0" FontSize ="24" Click="Patient_Click" Background="#F25050" BorderBrush="Black" />
+            <Button x:Name="Visitor" Content="Visitor" Grid.Row="1" Grid.Column="1" Margin="50 0 50 0" FontSize="24" Click="Visitor_Click" Background="#F25050" BorderBrush="Black" />
         </Grid>
         
     </StackPanel>

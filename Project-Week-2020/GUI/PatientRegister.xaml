@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="PatientRegister" Height="450" Width="1000">
-    <StackPanel>
+    <StackPanel Background="#171717">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -24,25 +24,25 @@
             </Grid.RowDefinitions>
             <Button x:Name="return" Content="return" Height="20" Width="50" FontSize="10" 
                     Padding="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 5 0 0"
-                    Background="LightGray" Click="return_Click" />
+                    Background="#F25050" Click="return_Click" />
             <TextBlock Text="Patient Register" Grid.Column="1" HorizontalAlignment="Center" 
-                       Foreground="#FFEE6618" FontSize="45" FontFamily="Dead Kansas"
+                       Foreground="#F25050" FontSize="45" FontFamily="Dead Kansas"
                        Margin="0 20 0 0"/>
-            <TextBox x:Name="firstname" Text="First Name" Grid.Row="1" Grid.Column="1"
-                     Background="LightGray" Width="320" Height="30" TextAlignment="Center"
+            <TextBox x:Name="firstname" Text="First Name" Grid.Row="1" Grid.Column="1" Foreground="#F25050"
+                     Background="#303030" Width="320" Height="30" TextAlignment="Center"
                      FontSize="18" HorizontalAlignment="Left" BorderBrush="Black" PreviewMouseDoubleClick="firstname_PreviewMouseDoubleClick" />
-            <TextBox x:Name="lastname" Text="Last Name" Grid.Row="1" Grid.Column="1"
-                     Background="LightGray" Width="320" Height="30" TextAlignment="Center"
+            <TextBox x:Name="lastname" Text="Last Name" Grid.Row="1" Grid.Column="1" Foreground="#F25050"
+                     Background="#303030" Width="320" Height="30" TextAlignment="Center"
                      FontSize="18" HorizontalAlignment="Right" BorderBrush="Black" PreviewMouseDoubleClick="lastname_MouseDoubleClick"/>
-            <TextBox x:Name="email" Text="Email" Grid.Column="1" 
-                     Grid.Row="2" TextAlignment="Center" Background="LightGray"
+            <TextBox x:Name="email" Text="Email" Grid.Column="1" Foreground="#F25050"
+                     Grid.Row="2" TextAlignment="Center" Background="#303030"
                      Height="30" FontSize="18" BorderBrush="Black" PreviewMouseDoubleClick="email_PreviewMouseDoubleClick"/>
             <TextBox x:Name="accesscode" Text="Access code With 6 digits" Grid.Column="1" Grid.Row="3"
-                       Margin="10" Width="250" FontSize="18" TextAlignment="Center"
-                       Background="LightGray" BorderBrush="Black" PreviewMouseDoubleClick="accesscode_PreviewMouseDoubleClick"/>
+                       Margin="10" Width="250" FontSize="18" TextAlignment="Center" Foreground="#F25050"
+                       Background="#303030" BorderBrush="Black" PreviewMouseDoubleClick="accesscode_PreviewMouseDoubleClick"/>
 
             <Button x:Name="register" Content="Register" Grid.Column="1" Grid.Row="5"
-                    Width="200" Background="#FFEE6618" BorderBrush="Black" 
+                    Width="200" Background="#F25050" BorderBrush="Black" 
                     HorizontalAlignment="Center" Click="register_Click" />
         </Grid>
     </StackPanel>

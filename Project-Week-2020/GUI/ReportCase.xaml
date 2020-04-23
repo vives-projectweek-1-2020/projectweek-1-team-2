@@ -8,6 +8,18 @@
         WindowStartupLocation="CenterScreen"
         Title="ReportCase" Height="450" Width="800">
     <StackPanel Background="#171717">
-        
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="4*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+
+            </Grid.RowDefinitions>
+            <Button x:Name="return" Content="return" Height="20" Width="50" FontSize="10" 
+                    Padding="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 5 0 0"
+                    Background="#F25050" Click="return_Click" />
+        </Grid>
     </StackPanel>
 </Window>

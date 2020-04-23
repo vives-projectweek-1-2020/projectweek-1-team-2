@@ -47,7 +47,7 @@ namespace GUI
         }
         private void contacthistory_Click(object sender, RoutedEventArgs e)
         {
-            ContactHistory contacthistory = new ContactHistory();
+            ContactHistory contacthistory = new ContactHistory(DBVar);
             contacthistory.Show();
             this.Close();
         }

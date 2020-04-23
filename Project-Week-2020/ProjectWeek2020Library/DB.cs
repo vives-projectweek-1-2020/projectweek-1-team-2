@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 using MySql.Data.MySqlClient;
+using System.Configuration;
+using System.Data;
+
 
 
 namespace Project_Week_2020
@@ -35,6 +38,7 @@ namespace Project_Week_2020
 
 
 
+
             public DBconnect()
             {
                 DataBase();
@@ -53,7 +57,6 @@ namespace Project_Week_2020
                 databasesql = "nursing_home1";
                 uid = "projectweek1";
                 password = System.IO.File.ReadAllText(@"C:\database password\password.txt");
-                Console.WriteLine(password);
                 string connectionString;
                 connectionString = "Server=" + Server + ";" + "Database= " + databasesql + ";" + "uid= " + uid + ";" + "Password=" + password + ";";
                 connection = new MySqlConnection(connectionString);
@@ -91,7 +94,7 @@ namespace Project_Week_2020
                 }
                 catch (MySqlException ex)
                 {
-
+                    ex.ToString();
                     return false;
                 }
             }
@@ -198,7 +201,7 @@ namespace Project_Week_2020
                     cmd.CommandText = query;
                     cmd.Connection = connection;
                     cmd.ExecuteNonQuery();
-                    Console.WriteLine(AccessCode1);
+                    
 
 
                 }
@@ -234,7 +237,7 @@ namespace Project_Week_2020
                     while (dataReader.Read())
                     {
                         MakeAPP = MakeAPP + dataReader.GetValue(0);
-
+                        
                     }
                     if (dataReader.HasRows)
                     {
@@ -254,11 +257,11 @@ namespace Project_Week_2020
                 {
                     string query = $"insert into visits (visitor_id, resident_id) values ({Output} , {MakeAPP});";
 
-                    
-                        MySqlCommand cmd = new MySqlCommand(query, connection);
-                        cmd.ExecuteNonQuery();
-                        this.CloseConnection();
-                    
+
+                    MySqlCommand cmd = new MySqlCommand(query, connection);
+                    cmd.ExecuteNonQuery();
+                    this.CloseConnection();
+
                 }
             }
 
@@ -324,8 +327,32 @@ namespace Project_Week_2020
                 }
             }
 
+            public string History()
+            {
+                string Visit = "";
+                if (this.OpenConnection() == true)
+                {
 
+                    string query = $"select concat(people.name, ' ', people.last_name) as name, visits.date_visit from people join visits on people.id = visits.visitor_id where visits.resident_id = {Output} order by date_visit desc;";
+                    
+                    command = new MySqlCommand(query, connection);
+                    dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        Visit += $"{dataReader.GetValue(0)} --- {dataReader.GetValue(1)}  \n";
+                        Console.WriteLine(Output);
+                    }
+
+                }
+                return Visit;
+
+
+
+
+            }
         }
     }
+
 }
+            
 

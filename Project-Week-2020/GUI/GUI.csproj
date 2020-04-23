@@ -59,6 +59,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ContactHistory.xaml.cs">
+      <DependentUpon>ContactHistory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ReportCase.xaml.cs">
       <DependentUpon>ReportCase.xaml</DependentUpon>
     </Compile>
@@ -82,9 +85,6 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="ContactHistory.xaml.cs">
-      <DependentUpon>ContactHistory.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

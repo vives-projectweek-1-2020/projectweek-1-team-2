@@ -34,7 +34,8 @@ namespace GUI
             if (DBVar.FOUNDID == true)
             {
                 MakeAN.Text = $"Do you want to make an appointment with {firstname.Text} {lastname.Text}?";
-                
+                Search.IsEnabled = false; //error wegdoen 
+
             }
             else
             {

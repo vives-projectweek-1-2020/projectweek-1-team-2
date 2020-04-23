@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
-        WindowStartupLocation="CenterScreen"
         Title="ContactHistory" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="tlacitko" Content="Button" HorizontalAlignment="Left" Height="38" Margin="343,259,0,0" VerticalAlignment="Top" Width="149" Click="tlacitko_Click"/>
+        <TextBlock x:Name="ViewConnection" HorizontalAlignment="Left" Height="188" Margin="32,25,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="442"/>
     </Grid>
 </Window>

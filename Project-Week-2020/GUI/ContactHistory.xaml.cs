@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Project_Week_2020;
 
 namespace GUI
 {
@@ -19,9 +20,20 @@ namespace GUI
     /// </summary>
     public partial class ContactHistory : Window
     {
-        public ContactHistory()
+        DB.DBconnect DBVar;
+
+        public ContactHistory(DB.DBconnect DBVar)
         {
             InitializeComponent();
+            this.DBVar = DBVar;
+            
+
+        }
+
+        private void tlacitko_Click(object sender, RoutedEventArgs e)
+        {
+            DBVar.CloseConnection();
+            ViewConnection.Text = DBVar.History();
         }
     }
 }

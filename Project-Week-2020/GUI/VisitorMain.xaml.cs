@@ -22,6 +22,7 @@ namespace GUI
     {
         DB.DBconnect DBVar ;
         int TemperatureFirst;
+       
         public VisitorMain(string firstname, DB.DBconnect DBVar)
         {
             InitializeComponent();
@@ -29,6 +30,7 @@ namespace GUI
             Visitor.Text = $"Logged in as {firstname}";
             previoustemperature.Text = $"Your previous temperature was {DBVar.userTempVisitor}";
             TemperatureFirst = Convert.ToInt32(DBVar.userTempVisitor);
+            
         }
         
         
@@ -61,7 +63,7 @@ namespace GUI
 
         private void makeappointment_Click(object sender, RoutedEventArgs e)
         {
-            MakeAppointment makeappointment = new MakeAppointment();
+            MakeAppointment makeappointment = new MakeAppointment(DBVar);
             makeappointment.Show();
             this.Close();
         }
@@ -69,17 +71,22 @@ namespace GUI
         private void NumberDegree_Click(object sender, RoutedEventArgs e)
         {
             int Temperature = DBVar.UpdateTemperature();
-
+            
             currenttemperature.Text = $"Your current temperature is {Temperature}";
             NumberDegree.IsEnabled = false;
             if(Temperature <= 38 && TemperatureFirst <= 38)
             {
                 makeappointment.Visibility = Visibility.Visible;
                 reportcase.Visibility = Visibility.Visible;
+                DBVar.CloseConnection();
+                DBVar.AccessCorrect();
+
             }
             else
             {
                 reportcase.Visibility = Visibility.Visible;
+                DBVar.CloseConnection();
+                DBVar.AccessWrong();
             }
             
             

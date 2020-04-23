@@ -18,12 +18,14 @@ namespace GUI
     public partial class PatientMain : Window
     {
         DB.DBconnect DBVar;
+        int TemperatureFirst;
         public PatientMain(string firstname , DB.DBconnect DBVar)
         {
             InitializeComponent();
             this.DBVar = DBVar;
             Patient.Text = $"Logged in as {firstname}";
             previoustemperature.Text = $"Your previous temperature was {DBVar.userTemp}";
+            TemperatureFirst = Convert.ToInt32(DBVar.userTemp);
         }
 
         private void return_Click(object sender, RoutedEventArgs e)
@@ -57,7 +59,20 @@ namespace GUI
             currenttemperature.Text = $"Your current temperature is {Temperature}";
             NumberDegree.IsEnabled = false;
             contacthistory.Visibility = Visibility.Visible;
-            
+            if (Temperature <= 38 && TemperatureFirst <= 38)
+            {
+                
+                DBVar.CloseConnection();
+                DBVar.AccessCorrect();
+
+            }
+            else
+            {
+                
+                DBVar.CloseConnection();
+                DBVar.AccessWrong();
+            }
+
         }
     }
 }

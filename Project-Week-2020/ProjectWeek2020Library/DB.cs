@@ -13,7 +13,7 @@ namespace Project_Week_2020
             MySqlConnection connection;
             MySqlCommand command;
             MySqlDataReader dataReader;
-            
+
             private string Server;
             private string databasesql;
             private string uid;
@@ -23,11 +23,15 @@ namespace Project_Week_2020
             public bool CheckValid = false;
             public bool TEMPJA = false;
             public string Output;
+            public string MakeAPP;
             public string outputvisitor;
             public string userid;
             public string userTemp;
             public string userTempVisitor = "";
             public int NumberDegree = 0;
+            public int AccessCode1 = 1;
+            public int AccessCode0 = 0;
+            public bool FOUNDID = false;
 
 
 
@@ -35,14 +39,14 @@ namespace Project_Week_2020
             {
                 DataBase();
                 RandomNumber();
-                
+
             }
             public void RandomNumber() //generates a random number.
             {
                 Random gen = new Random();
-                NumberDegree = gen.Next(34, 42);
+                NumberDegree = gen.Next(34, 36);
             }
-            
+
             private void DataBase()
             {
                 Server = "projectweek1.ddns.net";
@@ -53,11 +57,12 @@ namespace Project_Week_2020
                 connectionString = "Server=" + Server + ";" + "Database= " + databasesql + ";" + "uid= " + uid + ";" + "Password=" + password + ";";
                 connection = new MySqlConnection(connectionString);
             }
-            
+
             public bool OpenConnection()
             {
                 try
                 {
+
                     connection.Open();
                     return true;
                 }
@@ -85,7 +90,7 @@ namespace Project_Week_2020
                 }
                 catch (MySqlException ex)
                 {
-                    
+
                     return false;
                 }
             }
@@ -96,37 +101,29 @@ namespace Project_Week_2020
                 string query = $"INSERT INTO people (name, last_name, email, type, temperature, access, access_code) VALUES('{firstname}', '{lastname}', '{email}' ,'{type}', {temperature.ToString()}, {access.ToString()}, {accesscode});";
                 if (this.OpenConnection() == true)
                 {
-                    
+
                     MySqlCommand cmd = new MySqlCommand(query, connection);
                     cmd.ExecuteNonQuery();
                     this.CloseConnection();
                 }
             }
-            
 
-            
-
-
-            public void LoginCheckVisitor(string firstname, string lastname,  int accesscode)
-            {   
+            public void LoginCheckVisitor(string firstname, string lastname, int accesscode)
+            {
 
                 if (this.OpenConnection() == true)
                 {
                     string query = $"select id, name, last_name, access_code, access, temperature, type from people where name = '{firstname}' AND last_name = '{lastname}' AND access_code = '{accesscode}' AND type='visitor';";
-                    
-
                     command = new MySqlCommand(query, connection);
                     dataReader = command.ExecuteReader();
                     while (dataReader.Read())
                     {
-                         
+
                         Output = Output + dataReader.GetValue(0);
                         this.userTempVisitor += dataReader.GetValue(5); //hier krijgen we temperature
-                        Console.WriteLine(userTempVisitor);
-
 
                     }
-                    if (dataReader.HasRows) 
+                    if (dataReader.HasRows)
                     {
                         LOGINVALID = true;
                         CheckValid = true;
@@ -135,12 +132,11 @@ namespace Project_Week_2020
                     {
                         LOGINVALID = false;
                     }
-
                 }
             }
 
-            
-            
+
+
             public void LoginCheckPatient(string firstname, string lastname, int accesscode)
             {
 
@@ -155,7 +151,7 @@ namespace Project_Week_2020
                     {
                         Output = Output + dataReader.GetValue(0);
                         this.userTemp += dataReader.GetValue(5); //hier krijgen we temperature
-                        
+
 
                     }
                     if (dataReader.HasRows)
@@ -172,26 +168,98 @@ namespace Project_Week_2020
             }
 
 
-            
-                public int UpdateTemperature()
-                {
-                
+
+            public int UpdateTemperature()
+            {
+
                 string query = $"update people set temperature = {NumberDegree} where id = {Output};";
 
                 if (this.OpenConnection() == true)
-                    {
-                    
+                {
+
                     MySqlCommand cmd = new MySqlCommand();
-                        cmd.CommandText = query;
-                        cmd.Connection = connection;
+                    cmd.CommandText = query;
+                    cmd.Connection = connection;
                     cmd.ExecuteNonQuery();
-
-
 
 
                 }
                 return NumberDegree;
-                } 
+            }
+            public int AccessCorrect()
+            {
+                string query = $"update people set access = 1 where id  = {Output}";
+
+                if (this.OpenConnection() == true)
+                {
+
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.CommandText = query;
+                    cmd.Connection = connection;
+                    cmd.ExecuteNonQuery();
+                    Console.WriteLine(AccessCode1);
+
+
+                }
+                return AccessCode1;
+
+            }
+            public int AccessWrong()
+            {
+                string query = $"update people set access = 0 where id  = {Output}";
+
+                if (this.OpenConnection() == true)
+                {
+
+                    MySqlCommand cmd = new MySqlCommand();
+                    cmd.CommandText = query;
+                    cmd.Connection = connection;
+                    cmd.ExecuteNonQuery();
+
+
+                }
+                return AccessCode0;
+            }
+            public void MakeAppointmentSearch(string firstname, string lastname)
+            {
+                if (OpenConnection() == true)
+                {
+                    string query = $"select id, name, last_name from people where name = '{firstname}' and last_name = '{lastname}' and  type = 'resident';";
+                    command = new MySqlCommand(query, connection);
+
+                    dataReader = command.ExecuteReader();
+
+
+                    while (dataReader.Read())
+                    {
+                        MakeAPP = MakeAPP + dataReader.GetValue(0);
+
+                    }
+                    if (dataReader.HasRows)
+                    {
+                        FOUNDID = true;
+                    }
+                    else
+                    {
+                        FOUNDID = false;
+                    }
+                    CloseConnection();
+                }
+            }
+
+            public void MakeAppointment()
+            {
+                if (OpenConnection() == true)
+                {
+                    string query = $"insert into visits (visitor_id, resident_id) values ({Output} , {MakeAPP});";
+
+                    
+                        MySqlCommand cmd = new MySqlCommand(query, connection);
+                        cmd.ExecuteNonQuery();
+                        this.CloseConnection();
+                    
+                }
+            }
 
             public void EmailChecker(string email)
             {
@@ -208,7 +276,7 @@ namespace Project_Week_2020
                     while (dataReader.Read())
                     {
                         Output = Output + dataReader.GetValue(0);
-                        
+
                     }
                     if (dataReader.HasRows)
                     {
@@ -222,8 +290,8 @@ namespace Project_Week_2020
                 }
 
             }
-            
-            
+
+
             public void VISITORCOUNT()
             {
                 if (this.OpenConnection() == true)
@@ -236,9 +304,6 @@ namespace Project_Week_2020
                     while (dataReader.Read())
                     {
                         outputvisitor = outputvisitor + dataReader.GetValue(0);
-                        
-
-
 
                     }
 
@@ -258,6 +323,8 @@ namespace Project_Week_2020
                 }
             }
 
+
         }
     }
 }
+

@@ -21,21 +21,35 @@ namespace GUI
     public partial class VisitorMain : Window
     {
         DB.DBconnect DBVar ;
+        int TemperatureFirst;
         public VisitorMain(string firstname, DB.DBconnect DBVar)
         {
             InitializeComponent();
             this.DBVar = DBVar;
             Visitor.Text = $"Logged in as {firstname}";
-            previoustemperature.Text = $"Your previous temperature was {DBVar.userTempVisitor}"; 
+            previoustemperature.Text = $"Your previous temperature was {DBVar.userTempVisitor}";
+            TemperatureFirst = Convert.ToInt32(DBVar.userTempVisitor);
         }
         
         
         private void return_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Are you sure you want to return? You will be automatically logged out", "Nursing Home");
-            VisitorLogin visitorlogin = new VisitorLogin();
-            visitorlogin.Show();
-            this.Close();
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to return? You will be automatically logged out", "Nursing Home",MessageBoxButton.YesNo);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    VisitorLogin visitorlogin = new VisitorLogin();
+                    visitorlogin.Show();
+                    this.Close();
+                    break;
+
+                case MessageBoxResult.No:
+                    
+                    break;
+
+
+            }
+            
         }
 
         private void reportcase_Click(object sender, RoutedEventArgs e)
@@ -50,6 +64,25 @@ namespace GUI
             MakeAppointment makeappointment = new MakeAppointment();
             makeappointment.Show();
             this.Close();
+        }
+
+        private void NumberDegree_Click(object sender, RoutedEventArgs e)
+        {
+            int Temperature = DBVar.UpdateTemperature();
+
+            currenttemperature.Text = $"Your current temperature is {Temperature}";
+            NumberDegree.IsEnabled = false;
+            if(Temperature <= 38 && TemperatureFirst <= 38)
+            {
+                makeappointment.Visibility = Visibility.Visible;
+                reportcase.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                reportcase.Visibility = Visibility.Visible;
+            }
+            
+            
         }
     }
 }

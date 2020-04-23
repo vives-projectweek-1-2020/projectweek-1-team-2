@@ -28,16 +28,36 @@ namespace GUI
 
         private void return_Click(object sender, RoutedEventArgs e)
         {
-            PatientLogin patientlogin = new PatientLogin();
-            patientlogin.Show();
-            this.Close();
-        }
+            MessageBoxResult result = MessageBox.Show("Are you sure you want to return? You will be automatically logged out", "Nursing Home", MessageBoxButton.YesNo);
+            switch (result)
+            {
+                case MessageBoxResult.Yes:
+                    PatientLogin patientlogin = new PatientLogin();
+                    patientlogin.Show();
+                    this.Close();
+                    break;
 
+                case MessageBoxResult.No:
+
+                    break;
+
+            }
+        }
         private void contacthistory_Click(object sender, RoutedEventArgs e)
         {
             ContactHistory contacthistory = new ContactHistory();
             contacthistory.Show();
             this.Close();
+        }
+
+        private void NumberDegree_Click(object sender, RoutedEventArgs e)
+        {
+            int Temperature = DBVar.UpdateTemperature();
+
+            currenttemperature.Text = $"Your current temperature is {Temperature}";
+            NumberDegree.IsEnabled = false;
+            contacthistory.Visibility = Visibility.Visible;
+            
         }
     }
 }

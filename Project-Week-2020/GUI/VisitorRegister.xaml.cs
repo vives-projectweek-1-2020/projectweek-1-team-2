@@ -70,7 +70,7 @@ namespace GUI
                     }
                     else
                     {
-                        DBVar.Insert(firstname.Text, lastname.Text, email.Text, "Resident", NumberDegreeVisitor, AccessVisitor, Convert.ToInt32(accesscode.Text));
+                        DBVar.Insert(firstname.Text, lastname.Text, email.Text, "visitor", NumberDegreeVisitor, AccessVisitor, Convert.ToInt32(accesscode.Text));
                         VisitorLogin visitorlogin = new VisitorLogin();
                         visitorlogin.Show();
                         this.Close();

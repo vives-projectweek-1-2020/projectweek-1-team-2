@@ -21,9 +21,7 @@ namespace GUI
     public partial class VisitorLogin : Window
     {
         DB.DBconnect DBVar = new DB.DBconnect();
-        Email emailchecker = new Email();
-        FullName namechecker = new FullName();
-        AccessCode accesscodechecker = new AccessCode();
+        
         public VisitorLogin()
         {
             InitializeComponent();
@@ -52,6 +50,7 @@ namespace GUI
                 MessageBox.Show("Your Name, LastName OR AccessCode is wrong... Please try again!");
             }
             //DBVar.Insert(firstname.Text, lastname.Text, email.Text, "Resident", NumberDegreeResident, AccessResident, Convert.ToInt32(accesscode.Text));
+            
 
             DBVar.CloseConnection();
         }
@@ -73,7 +72,6 @@ namespace GUI
         {
             lastname.Text = "";
             lastname.Focus();
-
         }
 
         private void accesscode_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)

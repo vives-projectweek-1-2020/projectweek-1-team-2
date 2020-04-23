@@ -34,6 +34,7 @@ namespace Project_Week_2020
             public DBconnect()
             {
                 DataBase();
+                RandomNumber();
                 
             }
             public void RandomNumber() //generates a random number.
@@ -41,6 +42,7 @@ namespace Project_Week_2020
                 Random gen = new Random();
                 NumberDegree = gen.Next(34, 42);
             }
+            
             private void DataBase()
             {
                 Server = "projectweek1.ddns.net";
@@ -153,7 +155,7 @@ namespace Project_Week_2020
                     {
                         Output = Output + dataReader.GetValue(0);
                         this.userTemp += dataReader.GetValue(5); //hier krijgen we temperature
-                        Console.WriteLine(userTemp);
+                        
 
                     }
                     if (dataReader.HasRows)
@@ -171,17 +173,24 @@ namespace Project_Week_2020
 
 
             
-                public void UpdateTemperature()
+                public int UpdateTemperature()
                 {
-                    string query = $"update people set temperature = {NumberDegree} where id = {userid};";
-                    if (this.OpenConnection() == true)
-                    {
+                
+                string query = $"update people set temperature = {NumberDegree} where id = {Output};";
 
-                        MySqlCommand cmd = new MySqlCommand();
+                if (this.OpenConnection() == true)
+                    {
+                    
+                    MySqlCommand cmd = new MySqlCommand();
                         cmd.CommandText = query;
                         cmd.Connection = connection;
-                        cmd.ExecuteNonQuery();
-                    }
+                    cmd.ExecuteNonQuery();
+
+
+
+
+                }
+                return NumberDegree;
                 } 
 
             public void EmailChecker(string email)

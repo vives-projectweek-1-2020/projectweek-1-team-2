@@ -51,8 +51,9 @@ namespace Project_Week_2020
             {
                 Server = "projectweek1.ddns.net";
                 databasesql = "nursing_home1";
-                uid = "projectweek";
-                password = "olifant_watermeloen_balpen_vijventwintig";
+                uid = "projectweek1";
+                password = System.IO.File.ReadAllText(@"C:\database password\password.txt");
+                Console.WriteLine(password);
                 string connectionString;
                 connectionString = "Server=" + Server + ";" + "Database= " + databasesql + ";" + "uid= " + uid + ";" + "Password=" + password + ";";
                 connection = new MySqlConnection(connectionString);

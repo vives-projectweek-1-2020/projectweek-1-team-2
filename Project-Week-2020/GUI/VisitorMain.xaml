@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
         Title="VisitorMain" Height="450" Width="1000">
-    <StackPanel>
+    <StackPanel Background="#171717">
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -28,23 +28,23 @@
             </Grid.RowDefinitions>
             <Button x:Name="return" Content="return" Height="20" Width="50" FontSize="10" 
                     Padding="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 5 0 0"
-                    Background="LightGray" Click="return_Click" />
+                    Background="#F25050" Click="return_Click" />
             <TextBlock x:Name="Visitor"  Text="Logged in as a visitor" Grid.Column="1" HorizontalAlignment="Center"
-                       VerticalAlignment="Bottom" FontSize="18"/>
+                       VerticalAlignment="Bottom" FontSize="18" Foreground="#F25050"/>
             <TextBlock Text="Welcome To The Nursing Home" HorizontalAlignment="Center" 
-                       Foreground="#FFEE6618" FontSize="45" Margin="0 0 0 25" 
+                       Foreground="#F25050" FontSize="45" Margin="0 0 0 25" 
                        FontFamily="Dead Kansas" Grid.Column="1" />
             <TextBlock Text="What would you like to do?" Grid.Column="1" Grid.Row="1"
-                       TextAlignment="Center" FontSize="18" Margin="0 10 0 0" />
+                       TextAlignment="Center" FontSize="18" Margin="0 10 0 0" Foreground="#F25050"/>
             <Button x:Name="reportcase" Content="Report a corona case" Grid.Column="1" Grid.Row="7"
                     Width="200" Background="#FFEE6618" BorderBrush="Black"
                     HorizontalAlignment="Center" Click="reportcase_Click" Visibility="Hidden" />
             <Button x:Name="makeappointment" Content="Make an appointment" Grid.Column="1" Grid.Row="9"
                     Width="200" Background="#FFEE6618" BorderBrush="Black"
                     HorizontalAlignment="Center" Click="makeappointment_Click" Visibility="Hidden"/>
-            <TextBlock x:Name="previoustemperature" Text="Your previous temperature was ..." Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" FontSize="18" Margin="0 10 0 0" />
-            <TextBlock x:Name="currenttemperature" Text="Your current temperature is ..." Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" FontSize="18" Margin="20 10 0 0" />
-            <Button x:Name="NumberDegree" Content="Measure your new temperature" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Right" Margin="20 0 0 0" Click="NumberDegree_Click" />
+            <TextBlock x:Name="previoustemperature" Text="Your previous temperature was ..." Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" FontSize="18" Margin="0 10 0 0" Foreground="#F25050"/>
+            <TextBlock x:Name="currenttemperature" Text="Your current temperature is ..." Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" FontSize="18" Margin="20 10 0 0" Foreground="#F25050"/>
+            <Button x:Name="NumberDegree" Content="Measure your new temperature" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Right" Margin="20 0 0 0" Click="NumberDegree_Click" Background="#F25050"/>
         </Grid>
     </StackPanel>
 </Window>

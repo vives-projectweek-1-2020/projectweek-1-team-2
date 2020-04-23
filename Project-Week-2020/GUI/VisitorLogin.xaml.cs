@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Project_Week_2020;
+using System.Text.RegularExpressions;
 
 namespace GUI
 {
@@ -78,6 +79,11 @@ namespace GUI
         {
             accesscode.Text = "";
             accesscode.Focus();
+        }
+
+        private void accesscode_previewtextinput(object sender, TextCompositionEventArgs e)
+        {
+            e.Handled = new Regex("[^0-9]+").IsMatch(e.Text);
         }
     }
 }

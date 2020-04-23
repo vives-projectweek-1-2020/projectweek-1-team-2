@@ -31,14 +31,14 @@ namespace GUI
         {
             InitializeComponent();
             VisitorCounter();
-            //Sound();
+            Sound();
         }
-        /*private void Sound()
+        private void Sound()
         {
-            var player = new SoundPlayer("./"); //hier de wav file
+            var player = new SoundPlayer("./intro.wav"); //hier de wav file
             player.Load();
             player.Play();
-        }*/
+        }
 
         public void VisitorCounter()
         {

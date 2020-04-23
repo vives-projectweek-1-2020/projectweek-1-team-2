@@ -17,8 +17,8 @@
             <RowDefinition Height="100" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
-            <RowDefinition Height="50" />
-            <RowDefinition Height="20" />
+            <RowDefinition Height="30" />
+            <RowDefinition Height="10" />
             <RowDefinition Height="50" />
             <RowDefinition Height="50" />
         </Grid.RowDefinitions>
@@ -34,8 +34,10 @@
         <TextBox x:Name="lastname" Foreground="#F25050" Text="Last Name" Grid.Row="1" Grid.Column="1"
                      Background="#303030" Width="320" Height="30" TextAlignment="Center"
                      FontSize="18" HorizontalAlignment="Right" BorderBrush="Black"  PreviewMouseDoubleClick="lastname_PreviewMouseDoubleClick"/>
-        <Button x:Name="Search" Foreground="#F25050" Background="#303030" Content="Search" HorizontalAlignment="Center" Grid.Row="3" Grid.Column="1" FontSize="22" Click="Search_Click" IsDefault="True"/>
-        <Button x:Name="Okay" Foreground="#F25050" Background="#303030" Content="Okay i want to make an appointment" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" FontSize="22" Click="Okay_Click"/>
-        <TextBlock x:Name="MakeAN" Foreground="#F25050" Text="Do you want to make an appointment?" Grid.Row="2" Grid.Column="1" FontSize="18" HorizontalAlignment="Center" FontFamily="Dead Kansas" Margin="0 10 0 0"/>
+        <Button x:Name="Search" Background="#F25050"
+                BorderBrush="Black" Content="Search" HorizontalAlignment="Center" Grid.Row="2" Grid.Column="1" FontSize="22" Click="Search_Click" IsDefault="True"/>
+        <Button x:Name="Okay" Background="#F25050"
+                BorderBrush="Black" Content="Okay i want to make an appointment" HorizontalAlignment="Center" Grid.Row="5" Grid.Column="1" FontSize="22" Click="Okay_Click"/>
+        <TextBlock x:Name="MakeAN" Foreground="#F25050" Text="Do you want to make an appointment?" Grid.Row="3" Grid.Column="1" FontSize="18" HorizontalAlignment="Center" FontFamily="Dead Kansas" Margin="0 10 0 0"/>
     </Grid>
 </Window>

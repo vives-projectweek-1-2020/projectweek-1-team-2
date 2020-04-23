@@ -57,7 +57,7 @@ namespace GUI
         }
         private void register_Click(object sender, RoutedEventArgs e)
         {
-            if (emailchecker.IsValidEmail(email.Text) && namechecker.IsValidName(firstname.Text, lastname.Text) && accesscodechecker.IsValidAccessCode(Convert.ToInt32(accesscode.Text)))
+            if (emailchecker.IsValidEmail(email.Text) && namechecker.IsValidName(firstname.Text, lastname.Text) && accesscodechecker.IsValidAccessCode(Convert.ToInt32(accesscode.Password)))
             {
 
                 {
@@ -71,7 +71,7 @@ namespace GUI
                     }
                     else
                     {
-                        DBVar.Insert(firstname.Text, lastname.Text, email.Text, "visitor", NumberDegreeVisitor, AccessVisitor, Convert.ToInt32(accesscode.Text));
+                        DBVar.Insert(firstname.Text, lastname.Text, email.Text, "visitor", NumberDegreeVisitor, AccessVisitor, Convert.ToInt32(accesscode.Password));
                         VisitorLogin visitorlogin = new VisitorLogin();
                         visitorlogin.Show();
                         this.Close();
@@ -92,7 +92,7 @@ namespace GUI
                 {
                     MessageBox.Show("Invalid Name", "Nursing Home");
                 }
-                else if (!accesscodechecker.IsValidAccessCode(Convert.ToInt32(accesscode.Text)))
+                else if (!accesscodechecker.IsValidAccessCode(Convert.ToInt32(accesscode.Password)))
                 {
                     MessageBox.Show("Invalid Access Code (must be 6 numbers long and cannot start with a 0", "Nursing Home");
                 }
@@ -127,7 +127,7 @@ namespace GUI
 
         private void accesscode_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            accesscode.Text = "";
+            accesscode.Password = "";
             accesscode.Focus();
         }
 

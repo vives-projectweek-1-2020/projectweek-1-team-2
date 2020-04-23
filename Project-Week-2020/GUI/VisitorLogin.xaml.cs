@@ -38,7 +38,7 @@ namespace GUI
 
         private void login_Click(object sender, RoutedEventArgs e)
         {
-            DBVar.LoginCheckVisitor(firstname.Text, lastname.Text, Convert.ToInt32(accesscode.Text));
+            DBVar.LoginCheckVisitor(firstname.Text, lastname.Text, Convert.ToInt32(accesscode.Password));
             if (DBVar.LOGINVALID == true)
             {
                 
@@ -77,7 +77,7 @@ namespace GUI
 
         private void accesscode_PreviewMouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            accesscode.Text = "";
+            accesscode.Password = "";
             accesscode.Focus();
         }
 

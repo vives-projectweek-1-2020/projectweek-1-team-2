@@ -34,8 +34,8 @@
             <TextBox x:Name="lastname" Foreground="#F25050" Text="Last Name" Grid.Row="1" Grid.Column="1"
                      Background="#303030" Width="320" Height="30" TextAlignment="Center"
                      FontSize="18" HorizontalAlignment="Right" BorderBrush="Black" PreviewMouseDoubleClick="lastname_PreviewMouseDoubleClick" />
-            <TextBox x:Name="accesscode" Foreground="#F25050" Text="Access Code" Grid.Column="1" 
-                     Grid.Row="2" TextAlignment="Center" Background="#303030" 
+            <PasswordBox x:Name="accesscode" Foreground="#F25050"  Grid.Column="1" 
+                     Grid.Row="2" Background="#303030" MaxLength="25" PasswordChar="*" 
                      Height="30" Width="300" FontSize="18" BorderBrush="Black" PreviewMouseDoubleClick="accesscode_PreviewMouseDoubleClick" PreviewTextInput="accesscode_previewtextinput" />
             <Button x:Name="login" Content="Login" Grid.Column="1" Grid.Row="4"
                     Width="200" Background="#F25050" BorderBrush="Black"

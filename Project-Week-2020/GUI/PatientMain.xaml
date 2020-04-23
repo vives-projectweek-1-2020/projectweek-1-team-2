@@ -37,8 +37,9 @@
             <TextBlock Text="What would you like to do?" Grid.Column="1" Grid.Row="1"
                        TextAlignment="Center" FontSize="18" Margin="0 10 0 0" Foreground="#F25050"/>
             <Button x:Name="contacthistory" Content="Check Contact History" Grid.Column="1" Grid.Row="7"
-                    Width="200" Background="#FFEE6618" BorderBrush="Black"
-                    HorizontalAlignment="Center" Click="contacthistory_Click" Visibility="Hidden" />
+                    Width="200" Background="#F25050" BorderBrush="Black"
+                    HorizontalAlignment="Center" Click="contacthistory_Click" Visibility="Hidden" 
+                    />
             <TextBlock x:Name="previoustemperature" Text="Your previous temperature was ..." Grid.Column="1" Grid.Row="3" HorizontalAlignment="Center" FontSize="18" Margin="0 10 0 0" Foreground="#F25050"/>
             <TextBlock x:Name="currenttemperature" Text="Your current temperature is ..." Grid.Column="1" Grid.Row="5" HorizontalAlignment="Left" FontSize="18" Margin="20 10 0 0" Foreground="#F25050"/>
             <Button x:Name="NumberDegree" Content="Measure your new temperature" Grid.Column="1" Grid.Row="5" HorizontalAlignment="Right" Margin="20 0 0 0" Click="NumberDegree_Click" Background="#F25050"/>

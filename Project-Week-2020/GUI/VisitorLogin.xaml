@@ -36,7 +36,7 @@
                      FontSize="18" HorizontalAlignment="Right" BorderBrush="Black" PreviewMouseDoubleClick="lastname_PreviewMouseDoubleClick" />
             <TextBox x:Name="accesscode" Text="Access Code" Grid.Column="1" 
                      Grid.Row="2" TextAlignment="Center" Background="#303030" Foreground="#F25050"
-                     Height="30" Width="300" FontSize="18" BorderBrush="Black" PreviewMouseDoubleClick="accesscode_PreviewMouseDoubleClick"/>
+                     Height="30" Width="300" FontSize="18" BorderBrush="Black" PreviewMouseDoubleClick="accesscode_PreviewMouseDoubleClick" PreviewTextInput="accesscode_previewtextinput"/>
             <Button x:Name="login" Content="Login" Grid.Column="1" Grid.Row="4"
                     Width="200" Background="#F25050" BorderBrush="Black"
                     HorizontalAlignment="left" Margin="100 0 0 0" Click="login_Click" />

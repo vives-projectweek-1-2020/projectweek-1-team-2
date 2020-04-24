@@ -312,16 +312,24 @@ namespace Project_Week_2020
                 }
             }
 
-            public void Delete()
+            public string ReportCase()
             {
-                string query = "DELETE FROM ...";
-
+                string report = "";
                 if (this.OpenConnection() == true)
                 {
-                    MySqlCommand cmd = new MySqlCommand(query, connection);
-                    cmd.ExecuteNonQuery();
-                    this.CloseConnection();
+
+                    string query = $"select distinct email, concat(people.name, ' ', people.last_name) as name from people join visits on people.id = visits.resident_id where visits.visitor_id = {Output};";
+
+                    command = new MySqlCommand(query, connection);
+                    dataReader = command.ExecuteReader();
+                    while (dataReader.Read())
+                    {
+                        report += $"{dataReader.GetValue(0)} --- {dataReader.GetValue(1)}  \n";
+                        Console.WriteLine(Output);
+                    }
+
                 }
+                return report;
             }
 
             public string History()

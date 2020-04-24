@@ -9,17 +9,11 @@
         Title="Tempo Team" Height="450" Width="800">
     <StackPanel Background="#171717">
         <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="4*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-
-            </Grid.RowDefinitions>
             <Button x:Name="return" Content="return" Height="20" Width="50" FontSize="10" 
                     Padding="0" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="5 5 0 0"
                     Background="#F25050" Click="return_Click_1"/>
+            <Button x:Name="Reporting" Content="Report A Case" HorizontalAlignment="Center" Height="48" Margin="0 259 0 0" VerticalAlignment="Top" Width="300" Click="Reporting_Click" Background="#F25050" BorderBrush="Black"/>
+            <TextBlock x:Name="Report" HorizontalAlignment="Center" Height="188" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="442" Foreground="#F25050" TextAlignment="Center" Margin="0 20 0 0"/>
         </Grid>
     </StackPanel>
 </Window>

@@ -30,9 +30,15 @@ namespace GUI
 
         private void return_Click_1(object sender, RoutedEventArgs e)
         {
-            VisitorLogin visitorLogin = new VisitorLogin();
-            visitorLogin.Show();
+            MainWindow mainwindow = new MainWindow();
+            mainwindow.Show();
             this.Close();
+        }
+
+        private void Reporting_Click(object sender, RoutedEventArgs e)
+        {
+            DBVar.CloseConnection();
+            Report.Text = DBVar.ReportCase();
         }
     }
 }

@@ -48,7 +48,7 @@ namespace Project_Week_2020
             public void RandomNumber() //generates a random number.
             {
                 Random gen = new Random();
-                NumberDegree = gen.Next(34, 36);
+                NumberDegree = gen.Next(34, 41);
             }
 
             private void DataBase()

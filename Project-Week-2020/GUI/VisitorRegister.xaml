@@ -29,13 +29,13 @@
                        Foreground="#F25050" FontSize="45" FontFamily="Dead Kansas"
                        Margin="0 20 0 0"/>
             <TextBox x:Name="firstname" Text="First Name" Grid.Row="1" Grid.Column="1"
-                     Background="#303030" Width="320" Height="30" TextAlignment="Center"
+                     Background="#303030" Foreground="#F25050" Width="320" Height="30" TextAlignment="Center"
                      FontSize="18" HorizontalAlignment="Left" BorderBrush="Black" PreviewMouseDoubleClick="firstname_PreviewMouseDoubleClick"/>
             <TextBox x:Name="lastname" Text="Last Name" Grid.Row="1" Grid.Column="1"
-                     Background="#303030" Width="320" Height="30" TextAlignment="Center"
+                     Background="#303030" Foreground="#F25050" Width="320" Height="30" TextAlignment="Center"
                      FontSize="18" HorizontalAlignment="Right" BorderBrush="Black" PreviewMouseDoubleClick="lastname_PreviewMouseDoubleClick"/>
             <TextBox x:Name="email" Text="Email" Grid.Column="1" 
-                     Grid.Row="2" TextAlignment="Center" Background="#303030"
+                     Grid.Row="2" TextAlignment="Center" Background="#303030" Foreground="#F25050"
                      Height="30" FontSize="18" BorderBrush="Black" PreviewMouseDoubleClick="email_PreviewMouseDoubleClick"/>
             <PasswordBox x:Name="accesscode" Foreground="#F25050"  Grid.Column="1" 
                      Grid.Row="3" Background="#303030" MaxLength="6" PasswordChar="*" 

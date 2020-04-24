@@ -36,7 +36,7 @@
                        FontFamily="Dead Kansas" Grid.Column="1" />
             <TextBlock Text="What would you like to do?" Grid.Column="1" Grid.Row="1"
                        TextAlignment="Center" FontSize="18" Margin="0 10 0 0" Foreground="#F25050"/>
-            <Button x:Name="reportcase" Content="Report a corona case" Grid.Column="1" Grid.Row="7"
+            <Button x:Name="reportcase" Content="Make a Report" Grid.Column="1" Grid.Row="7"
                     Width="200"  BorderBrush="Black"
                     HorizontalAlignment="Center" Click="reportcase_Click" Visibility="Hidden" Background="#F25050" FontSize="15"/>
             <Button x:Name="makeappointment" Content="Make an appointment" Grid.Column="1" Grid.Row="9"

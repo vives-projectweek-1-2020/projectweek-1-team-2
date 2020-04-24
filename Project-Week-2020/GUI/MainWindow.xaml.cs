@@ -14,7 +14,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Project_Week_2020;
 using System.Media;
-
 using MySql.Data.MySqlClient;
 
 namespace GUI

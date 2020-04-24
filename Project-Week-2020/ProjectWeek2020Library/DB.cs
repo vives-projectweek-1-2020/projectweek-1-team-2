@@ -36,9 +36,6 @@ namespace Project_Week_2020
             public int AccessCode0 = 0;
             public bool FOUNDID = false;
 
-
-
-
             public DBconnect()
             {
                 DataBase();

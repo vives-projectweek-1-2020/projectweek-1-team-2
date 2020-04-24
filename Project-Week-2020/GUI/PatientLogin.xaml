@@ -39,7 +39,7 @@
                          Height="30" Width="300" FontSize="18" BorderBrush="Black" 
                          PreviewMouseDoubleClick="accesscode_PreviewMouseDoubleClick" 
                          PreviewTextInput="accesscode_previewtextinput"/>
-            <TextBlock Text="Access Code" Grid.Column="1" Grid.Row="3" Foreground="#F25050"
+            <TextBlock Text="Access Code with 6 digits" Grid.Column="1" Grid.Row="3" Foreground="#F25050"
                        FontSize="18" TextAlignment="Center"/>
             <Button x:Name="login" Content="Login" Grid.Column="1" Grid.Row="4"
                     Width="200" Background="#F25050" BorderBrush="Black"

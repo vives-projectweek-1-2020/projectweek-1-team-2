@@ -26,6 +26,10 @@ The general working of this app aims to do the following:
 1. Visual Studio Code -C# and WPF
 2. MariaDb
 
+## Demonstration video
+
+  https://www.youtube.com/watch?v=ta9_o6AalTc
+
 ## Mentors
 
 1. Sille Van Landschoot

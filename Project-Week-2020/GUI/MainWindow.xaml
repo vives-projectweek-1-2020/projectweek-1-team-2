@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="MainWindow" Height="450" Width="1000">
+        Title="Tempo Team" Height="450" Width="1000">
     <StackPanel Background="#171717">
         <Grid>
             <TextBlock Text="Welcome To The Nursing Home" HorizontalAlignment="Center" Foreground="#F25050" FontSize="45" Margin="0 0 0 25" FontFamily="Dead Kansas"/>

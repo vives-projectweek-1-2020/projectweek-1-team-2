@@ -109,6 +109,7 @@ namespace GUI
         {
             VisitorLogin visitorlogin = new VisitorLogin();
             visitorlogin.Show();
+            this.Close();
 
         }
 

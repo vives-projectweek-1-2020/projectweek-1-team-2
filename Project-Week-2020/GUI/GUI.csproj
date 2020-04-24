@@ -194,6 +194,8 @@
     <Resource Include="29468072.ico" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="background.png" />
+    <Resource Include="background1.png" />
     <Content Include="Intro.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

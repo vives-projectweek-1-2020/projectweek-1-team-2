@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:GUI"
         mc:Ignorable="d"
         WindowStartupLocation="CenterScreen"
-        Title="VisitorRegister" Height="450" Width="1000">
+        Title="Tempo Team" Height="450" Width="1000">
     <StackPanel Background="#171717">
         <Grid>
             <Grid.ColumnDefinitions>
@@ -38,7 +38,7 @@
                      Grid.Row="2" TextAlignment="Center" Background="#303030"
                      Height="30" FontSize="18" BorderBrush="Black" PreviewMouseDoubleClick="email_PreviewMouseDoubleClick"/>
             <PasswordBox x:Name="accesscode" Foreground="#F25050"  Grid.Column="1" 
-                     Grid.Row="3" Background="#303030" MaxLength="25" PasswordChar="*" 
+                     Grid.Row="3" Background="#303030" MaxLength="6" PasswordChar="*" 
                      Height="30" Width="300" FontSize="18" BorderBrush="Black" PreviewMouseDoubleClick="accesscode_PreviewMouseDoubleClick" PreviewTextInput="accesscode_previewtextinput" />
             <TextBlock Text="Access Code with 6 digits" Grid.Column="1" Grid.Row="4" Foreground="#F25050"
                        FontSize="18" TextAlignment="Center"/>
